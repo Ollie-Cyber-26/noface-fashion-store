@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOFACE | Menswear Editorial &amp; Capsule Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f7f6f3;
+      --text: #111111;
+      --text-muted: #666666;
+      --text-light: #999999;
+      --border: #e6e6e6;
+      --font-serif: 'Bodoni Moda', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* 1. TOP PROMO STRIP (REVOLVE STYLE) */
+    .promo-bar {
+      background: #111111;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 9px 20px;
+    }
+
+    /* 2. ULTRA-CLEAN REVOLVE HEADER */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-top {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px 36px 16px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .header-search {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-search input {
+      border: none;
+      border-bottom: 1px solid #cccccc;
+      padding: 5px 0;
+      font-size: 12px;
+      width: 190px;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+
+    .header-search input:focus {
+      border-bottom-color: #111111;
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .header-utils {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .util-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .util-btn:hover {
+      opacity: 0.65;
+    }
+
+    .nav-bar {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 36px 12px;
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .nav-bar button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-bar button:hover,
+    .nav-bar button.active {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+
+    /* 3. EDITORIAL HERO (CLEAN MAGAZINE LAYOUT) */
+    .editorial-hero {
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 48px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-text-col {
+      max-width: 500px;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .hero-subcopy {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      background: #111111;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 15px 32px;
+      border: 1px solid #111111;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #111111;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      padding: 15px 28px;
+      border: 1px solid #111111;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .look-chapter-links {
+      border-top: 1px solid #dedede;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .chapter-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      margin-right: 6px;
+    }
+
+    .chapter-btn {
+      background: #ffffff;
+      border: 1px solid #d8d8d8;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 6px 14px;
+      cursor: pointer;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+
+    .chapter-btn:hover,
+    .chapter-btn.active {
+      background: #111111;
+      color: #ffffff;
+      border-color: #111111;
+    }
+
+    .hero-media-col {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .video-editorial-box {
+      background: #000;
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-editorial-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .editorial-still-box {
+      overflow: hidden;
+      position: relative;
+      background: #eae8e3;
+    }
+
+    .editorial-still-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .still-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 8px 14px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* 4. FILTER & COUNT BAR */
+    .catalog-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 36px 80px;
+    }
+
+    .catalog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .catalog-title-group h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 500;
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .item-count {
+      font-size: 12px;
+      color: var(--text-light);
+      letter-spacing: 0.5px;
+    }
+
+    .sort-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .sort-control select {
+      border: none;
+      border-bottom: 1px solid var(--text);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px 4px 0;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* 5. PURE REVOLVE BORDERLESS PRODUCT GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 24px;
+      row-gap: 48px;
+    }
+
+    .revolve-card {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .revolve-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #f4f4f2;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .revolve-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .revolve-card:hover .revolve-image-wrap img {
+      transform: scale(1.03);
+    }
+
+    .heart-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111111;
+      transition: transform 0.15s;
+    }
+
+    .heart-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .heart-btn.saved {
+      color: #d11a2a;
+    }
+
+    .editorial-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #ffffff;
+      color: #111111;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 4px 9px;
+    }
+
+    .quick-shop-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      color: #111111;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 13px 10px;
+      transform: translateY(100%);
+      transition: transform 0.25s ease;
+      border-top: 1px solid var(--border);
+    }
+
+    .revolve-card:hover .quick-shop-bar {
+      transform: translateY(0);
+    }
+
+    .quick-shop-bar:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    /* ULTRA-NEAT 3-LINE TEXT BELOW PHOTO */
+    .revolve-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .revolve-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .revolve-name {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .revolve-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .revolve-price {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .revolve-retailer-links {
+      display: flex;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .revolve-retailer-links a {
+      color: var(--text-muted);
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .revolve-retailer-links a:hover {
+      color: #111111;
+      border-bottom-color: #111111;
+    }
+
+    /* 6. MINIMALIST EDITORIAL BANNER FOR $12 PLAYBOOK */
+    .playbook-editorial-strip {
+      max-width: 1440px;
+      margin: 0 auto 64px;
+      padding: 0 36px;
+    }
+
+    .playbook-inner {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .playbook-copy {
+      max-width: 640px;
+    }
+
+    .playbook-copy span {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .playbook-copy h3 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .playbook-copy p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* 7. QUICK VIEW DIALOG MODAL (CLEAN WHITE EDITORIAL) */
+    dialog#quickModal {
+      margin: auto;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text);
+      max-width: 880px;
+      width: 92vw;
+      padding: 0;
+      outline: none;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    dialog#quickModal::backdrop {
+      background: rgba(17, 17, 17, 0.45);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+    }
+
+    .modal-photo {
+      background: #f4f4f2;
+      aspect-ratio: 3 / 4;
+      width: 100%;
+    }
+
+    .modal-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-details {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .modal-piece-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0 28px;
+    }
+
+    .modal-piece-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .modal-piece-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .modal-piece-links a {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border: 1px solid #111111;
+      transition: all 0.15s;
+    }
+
+    .modal-piece-links a:hover {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    /* 8. FOOTER */
+    footer.site-footer {
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+      padding: 56px 36px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .footer-brand {
+      max-width: 380px;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 1080px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 32px;
+      }
+      .header-top {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+      }
+      .header-search, .header-utils {
+        justify-content: center;
+      }
+      .hero-media-col {
+        grid-template-columns: 1fr;
+      }
+      .modal-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-bar">
+    Summer 2026 Menswear Curation &middot; Shop Exact Pieces via Verified Amazon &amp; SHEIN Links
+  </div>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-search">
+        <input type="text" placeholder="Search linen, blazer, loafers..." oninput="searchCatalog(this.value)" />
+      </div>
+      <a href="#" class="brand-wordmark">NOFACE</a>
+      <div class="header-utils">
+        <button class="util-btn" onclick="filterBy('saved')">Saved (<span id="savedCounter">0</span>)</button>
+        <a href="capsule-playbook.html" target="_blank" class="util-btn">Style Guide ($12)</a>
+      </div>
+    </div>
+
+    <nav class="nav-bar">
+      <button class="active" onclick="filterBy('all', this)">All Edit (12)</button>
+      <button onclick="filterBy('look', this)">Complete Looks (4)</button>
+      <button onclick="filterBy('shirting', this)">Shirting &amp; Jackets</button>
+      <button onclick="filterBy('trousers', this)">Trousers &amp; Shorts</button>
+      <button onclick="filterBy('accessories', this)">Footwear &amp; Bags</button>
+    </nav>
+  </header>
+
+  <!-- EDITORIAL HERO -->
+  <section class="editorial-hero">
+    <div class="hero-container">
+      <div class="hero-text-col">
+        <div class="hero-kicker">The Summer '26 Runway Edit</div>
+        <h1 class="hero-headline">Effortless Linen &amp; Modern Tailoring</h1>
+        <p class="hero-subcopy">
+          Four cohesive capsule looks designed for city mornings, coastal afternoons, and evening tailoring. Watch the runway reel and shop each individual garment below.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogSection" class="btn-primary">Shop The Edit</a>
+          <a href="#playbookSection" class="btn-outline">16-Piece Wardrobe Guide</a>
+        </div>
+        <div class="look-chapter-links">
+          <span class="chapter-label">Jump to Look:</span>
+          <button class="chapter-btn active" onclick="seekRunway(0, 'images/look_01.jpg', 'Look 01: City Walk Linen ($115)', this)">01 City</button>
+          <button class="chapter-btn" onclick="seekRunway(7.5, 'images/look_02.jpg', 'Look 02: Weekend Resort ($114)', this)">02 Resort</button>
+          <button class="chapter-btn" onclick="seekRunway(15, 'images/look_03.jpg', 'Look 03: Coastal Old Money ($127)', this)">03 Beach</button>
+          <button class="chapter-btn" onclick="seekRunway(22.5, 'images/look_04.jpg', 'Look 04: Date Night Tailoring ($206)', this)">04 Tailored</button>
+        </div>
+      </div>
+
+      <div class="hero-media-col">
+        <div class="video-editorial-box">
+          <video id="runwayVideo" controls playsinline preload="metadata" poster="images/look_01.jpg">
+            <source src="videos/faceless-summer-lookbook-veo.webm" type="video/webm">
+            <source src="videos/faceless-summer-lookbook-veo.mp4" type="video/mp4">
+            <source src="videos/noface-summer-lookbook.webm" type="video/webm">
+            <source src="videos/noface-summer-lookbook.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="editorial-still-box">
+          <img id="heroStillImg" src="images/look_01.jpg" alt="Featured Runway Look" />
+          <div class="still-caption" id="heroStillCaption">Look 01: City Walk Linen ($115)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN REVOLVE PRODUCT GRID -->
+  <main class="catalog-wrapper" id="catalogSection">
+    <div class="catalog-header">
+      <div class="catalog-title-group">
+        <h2>The Summer Capsule</h2>
+        <span class="item-count" id="visibleCount">12 Items</span>
+      </div>
+      <div class="sort-control">
+        <span>Sort By</span>
+        <select onchange="sortGrid(this.value)">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-grid" id="revolveGrid"></div>
+  </main>
+
+  <!-- MINIMALIST EDITORIAL DIGITAL GUIDE STRIP -->
+  <section class="playbook-editorial-strip" id="playbookSection">
+    <div class="playbook-inner">
+      <div class="playbook-copy">
+        <span>Digital Edition &middot; Instant PDF Download</span>
+        <h3>The 16-Piece Men's Smart Casual Capsule Playbook</h3>
+        <p>
+          Includes all 32 outfit combinations, exact tailor alteration measurements, linen care instructions, and clickable budget vs. luxury links.
+        </p>
+      </div>
+      <div>
+        <a href="capsule-playbook.html" target="_blank" class="btn-primary">Download Digital Guide &middot; $12</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLEAN WHITE QUICK VIEW MODAL -->
+  <dialog id="quickModal">
+    <div class="modal-layout">
+      <div class="modal-photo">
+        <img id="mPhoto" src="images/look_01.jpg" alt="Outfit Preview" />
+      </div>
+      <div class="modal-details">
+        <div class="modal-top">
+          <div>
+            <div class="revolve-brand" id="mBrand">NOFACE ATELIER</div>
+            <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 500; margin-top: 4px;" id="mTitle">City Walk Linen Capsule</h3>
+          </div>
+          <button class="modal-close" onclick="document.getElementById('quickModal').close()">&times;</button>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted);" id="mDesc"></p>
+
+        <ul class="modal-piece-list" id="mList"></ul>
+
+        <div style="margin-top: auto; display: flex; gap: 12px;">
+          <a id="mPrimaryLink" href="#" target="_blank" rel="noopener" class="btn-primary" style="flex: 1; text-align: center;">Shop on Amazon</a>
+          <a id="mSecondaryLink" href="#" target="_blank" rel="noopener" class="btn-outline" style="flex: 1; text-align: center;">Shop on SHEIN</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4>NOFACE</h4>
+        <p>Minimalist menswear curation. As an affiliate partner with Amazon Associates and global fashion retailers, we may earn a commission on qualifying purchases at no additional cost to you.</p>
+      </div>
+      <div>
+        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Runway Assets</div>
+        <p><a href="videos/faceless-summer-lookbook-veo.mp4" download>Download 9:16 Video (MP4)</a></p>
+        <p style="margin-top: 4px;"><a href="videos/faceless-summer-lookbook-veo.webm" download>Download 9:16 Video (WebM)</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const catalogItems = [
+      {
+        id: 'item-1',
+        type: 'look',
+        badge: 'Complete Look 01',
+        brand: 'NOFACE RUNWAY',
+        name: 'City Walk Pinstripe Linen 4-Piece Set',
+        price: 115,
+        img: 'images/look_01.jpg',
+        pos: 'center top',
+        desc: 'Relaxed vertical pinstripe linen shirt paired with flat-front beige chino shorts, cork buckle slides, and a heavyweight canvas tote.',
+        amazon: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/',
+        pieces: [
+          { title: 'Off-White Pinstripe Linen Shirt', price: '$34', url: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofacecapsule-20' },
+          { title: 'Beige Tailored Chino Shorts (7")', price: '$28', url: 'https://www.amazon.com/s?k=mens+beige+tailored+chino+shorts+7+inch&tag=nofacecapsule-20' },
+          { title: 'White Two-Strap Cork Slides', price: '$29', url: 'https://www.amazon.com/s?k=mens+white+two+strap+buckle+sandals&tag=nofacecapsule-20' },
+          { title: 'Heavyweight Cream Canvas Tote', price: '$24', url: 'https://www.amazon.com/s?k=cream+heavyweight+canvas+tote+bag+mens&tag=nofacecapsule-20' }
+        ]
+      },
+      {
+        id: 'item-2',
+        type: 'look',
+        badge: 'Complete Look 02',
+        brand: 'NOFACE RUNWAY',
+        name: 'Weekend Resort Botanical Cuban 4-Piece Set',
+        price: 114,
+        img: 'images/look_02.jpg',
+        pos: 'center top',
+        desc: 'Emerald and cream botanical Cuban collar shirt layered with tapered olive cargo shorts, tan suede slides, and a leather crossbody.',
+        amazon: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/',
+        pieces: [
+          { title: 'Cream & Emerald Cuban Resort Shirt', price: '$32', url: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofacecapsule-20' },
+          { title: 'Olive Tapered Cargo Shorts', price: '$28', url: 'https://www.amazon.com/s?k=mens+olive+green+tailored+cargo+shorts&tag=nofacecapsule-20' },
+          { title: 'Tan Suede Two-Strap Sandals', price: '$30', url: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofacecapsule-20' },
+          { title: 'Brown Leather Crossbody Bag', price: '$24', url: 'https://www.amazon.com/s?k=brown+leather+crossbody+bag+unisex&tag=nofacecapsule-20' }
+        ]
+      },
+      {
+        id: 'item-3',
+        type: 'look',
+        badge: 'Complete Look 03',
+        brand: 'NOFACE RUNWAY',
+        name: 'Old Money Coastal Linen 4-Piece Set',
+        price: 127,
+        img: 'images/look_03.jpg',
+        pos: 'center top',
+        desc: 'Tonal sand beige camp-collar linen shirt with wide-leg cream linen trousers, espresso leather slides, and stainless gold chain.',
+        amazon: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/',
+        pieces: [
+          { title: 'Sand Beige Open-Collar Linen Shirt', price: '$34', url: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofacecapsule-20' },
+          { title: 'Cream Relaxed-Fit Linen Trousers', price: '$42', url: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofacecapsule-20' },
+          { title: 'Dark Espresso Leather Slides', price: '$31', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+two+strap+sandals&tag=nofacecapsule-20' },
+          { title: 'Layered Gold Chain & Classic Frames', price: '$20', url: 'https://www.amazon.com/s?k=mens+layered+gold+pendant+necklace+stainless&tag=nofacecapsule-20' }
+        ]
+      },
+      {
+        id: 'item-4',
+        type: 'look',
+        badge: 'Complete Look 04',
+        brand: 'NOFACE RUNWAY',
+        name: 'Date Night Camel Blazer Tailored Set',
+        price: 206,
+        img: 'images/look_04.jpg',
+        pos: 'center top',
+        desc: 'Unstructured camel single-breasted blazer over an espresso knit tee, charcoal pleated dress trousers, and leather weekender.',
+        amazon: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20camel%20blazer/',
+        pieces: [
+          { title: 'Tailored Camel Single-Breasted Blazer', price: '$68', url: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofacecapsule-20' },
+          { title: 'Charcoal Pleated Dress Trousers', price: '$45', url: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofacecapsule-20' },
+          { title: 'Cream & Gum-Sole Court Sneakers', price: '$39', url: 'https://www.amazon.com/s?k=mens+cream+gum+sole+retro+sneakers&tag=nofacecapsule-20' },
+          { title: 'Dark Brown Leather Weekender Tote', price: '$54', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofacecapsule-20' }
+        ]
+      },
+      {
+        id: 'item-5',
+        type: 'shirting',
+        badge: 'Bestseller',
+        brand: 'ATELIER TAILORING',
+        name: 'Unstructured Camel Single-Breasted Blazer',
+        price: 68,
+        img: 'images/item_05_blazer.jpg',
+        pos: 'center center',
+        desc: 'Lightweight modern tailored camel jacket designed to layer effortlessly over knit tees or linen shirting.',
+        amazon: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20camel%20blazer/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$68', url: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofacecapsule-20' },
+          { title: 'SHEIN Manfinity Option', price: '$42', url: 'https://us.shein.com/pdsearch/men%20camel%20blazer/' }
+        ]
+      },
+      {
+        id: 'item-6',
+        type: 'shirting',
+        badge: 'Essential',
+        brand: 'COASTAL LINEN',
+        name: 'Off-White Vertical Pinstripe Linen Shirt',
+        price: 34,
+        img: 'images/item_06_striped_shirt.jpg',
+        pos: 'center center',
+        desc: 'Breathable cotton-linen weave with subtle vertical stripes and relaxed rolled sleeves.',
+        amazon: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$34', url: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofacecapsule-20' },
+          { title: 'SHEIN Linen Option', price: '$19', url: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/' }
+        ]
+      },
+      {
+        id: 'item-7',
+        type: 'shirting',
+        badge: 'Resort Edit',
+        brand: 'HAVANA CLUB',
+        name: 'Emerald Botanical Print Cuban Collar Shirt',
+        price: 32,
+        img: 'images/item_07_cuban_shirt.jpg',
+        pos: 'center center',
+        desc: 'Statement foliage print on airy off-white fabric with camp collar.',
+        amazon: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$32', url: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofacecapsule-20' },
+          { title: 'SHEIN Resort Option', price: '$16', url: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/' }
+        ]
+      },
+      {
+        id: 'item-8',
+        type: 'shirting',
+        badge: 'Old Money',
+        brand: 'COASTAL LINEN',
+        name: 'Sand Beige Open-Collar Camp Linen Shirt',
+        price: 34,
+        img: 'images/item_08_sand_shirt.jpg',
+        pos: 'center center',
+        desc: 'Relaxed short-sleeve linen shirt in warm desert sand.',
+        amazon: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$34', url: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofacecapsule-20' },
+          { title: 'SHEIN Linen Option', price: '$18', url: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/' }
+        ]
+      },
+      {
+        id: 'item-9',
+        type: 'trousers',
+        badge: 'Tailored Drape',
+        brand: 'ATELIER TAILORING',
+        name: 'Cream Relaxed-Fit Straight Linen Trousers',
+        price: 42,
+        img: 'images/item_09_cream_pants.jpg',
+        pos: 'center center',
+        desc: 'Wide-leg breathable linen blend trousers with clean ankle break.',
+        amazon: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20cream%20linen%20pants/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$42', url: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofacecapsule-20' },
+          { title: 'SHEIN Linen Option', price: '$23', url: 'https://us.shein.com/pdsearch/men%20cream%20linen%20pants/' }
+        ]
+      },
+      {
+        id: 'item-10',
+        type: 'trousers',
+        badge: 'Evening Cut',
+        brand: 'ATELIER TAILORING',
+        name: 'Charcoal Pleated Straight Dress Trousers',
+        price: 45,
+        img: 'images/item_10_charcoal_pants.jpg',
+        pos: 'center center',
+        desc: 'Front-pleated tailored charcoal trousers with fluid drape.',
+        amazon: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20pleated%20trousers/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$45', url: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofacecapsule-20' },
+          { title: 'SHEIN Tailored Option', price: '$25', url: 'https://us.shein.com/pdsearch/men%20pleated%20trousers/' }
+        ]
+      },
+      {
+        id: 'item-11',
+        type: 'accessories',
+        badge: 'Carryall',
+        brand: 'NOFACE GOODS',
+        name: 'Full-Grain Look Dark Brown Weekender Tote',
+        price: 54,
+        img: 'images/item_11_leather_tote.jpg',
+        pos: 'center center',
+        desc: 'Structured dark espresso leather tote sized for daily carry and weekend travel.',
+        amazon: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20brown%20leather%20tote/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$54', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofacecapsule-20' },
+          { title: 'SHEIN Travel Option', price: '$28', url: 'https://us.shein.com/pdsearch/men%20brown%20leather%20tote/' }
+        ]
+      },
+      {
+        id: 'item-12',
+        type: 'accessories',
+        badge: 'Footwear',
+        brand: 'NOFACE FOOTWEAR',
+        name: 'Tan Suede Two-Strap Contoured Cork Slides',
+        price: 30,
+        img: 'images/item_12_suede_slides.jpg',
+        pos: 'center center',
+        desc: 'Soft suede double-buckle straps mounted on an ergonomic cork footbed.',
+        amazon: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofacecapsule-20',
+        shein: 'https://us.shein.com/pdsearch/men%20cork%20sandals/',
+        pieces: [
+          { title: 'Amazon Prime Option', price: '$30', url: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofacecapsule-20' },
+          { title: 'SHEIN Footwear Option', price: '$17', url: 'https://us.shein.com/pdsearch/men%20cork%20sandals/' }
+        ]
+      }
+    ];
+
+    const savedSet = new Set();
+    let activeFilter = 'all';
+    let activeSort = 'featured';
+    let searchQuery = '';
+
+    function renderGrid() {
+      const grid = document.getElementById('revolveGrid');
+      grid.innerHTML = '';
+
+      let list = catalogItems.filter(item => {
+        if (activeFilter === 'saved') return savedSet.has(item.id);
+        if (activeFilter !== 'all' && item.type !== activeFilter) return false;
+        if (searchQuery) {
+          const hay = (item.brand + ' ' + item.name + ' ' + item.desc).toLowerCase();
+          return hay.includes(searchQuery);
+        }
+        return true;
+      });
+
+      if (activeSort === 'low') {
+        list.sort((a, b) => a.price - b.price);
+      } else if (activeSort === 'high') {
+        list.sort((a, b) => b.price - a.price);
+      }
+
+      document.getElementById('visibleCount').innerText = `${list.length} Items`;
+
+      list.forEach(item => {
+        const card = document.createElement('article');
+        card.className = 'revolve-card';
+        const isSaved = savedSet.has(item.id);
+
+        card.innerHTML = `
+          <div class="revolve-image-wrap" onclick="openModal('${item.id}')">
+            <img src="${item.img}" alt="${item.name}" loading="lazy" style="object-position: ${item.pos};" />
+            <span class="editorial-tag">${item.badge}</span>
+            <button class="heart-btn ${isSaved ? 'saved' : ''}" onclick="event.stopPropagation(); toggleSave('${item.id}')">
+              ${isSaved ? '&#9829;' : '&#9825;'}
+            </button>
+            <div class="quick-shop-bar">Quick View &amp; Shop</div>
+          </div>
+          <div class="revolve-meta">
+            <div class="revolve-brand">${item.brand}</div>
+            <div class="revolve-name" onclick="openModal('${item.id}')">${item.name}</div>
+            <div class="revolve-price-row">
+              <span class="revolve-price">$${item.price}</span>
+              <div class="revolve-retailer-links">
+                <a href="${item.amazon}" target="_blank" rel="noopener">Amazon</a>
+                <a href="${item.shein}" target="_blank" rel="noopener">SHEIN</a>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function toggleSave(id) {
+      if (savedSet.has(id)) {
+        savedSet.delete(id);
+      } else {
+        savedSet.add(id);
+      }
+      document.getElementById('savedCounter').innerText = savedSet.size;
+      renderGrid();
+    }
+
+    function filterBy(type, btn) {
+      activeFilter = type;
+      if (btn) {
+        document.querySelectorAll('.nav-bar button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      renderGrid();
+    }
+
+    function sortGrid(val) {
+      activeSort = val;
+      renderGrid();
+    }
+
+    function searchCatalog(q) {
+      searchQuery = q.toLowerCase().trim();
+      renderGrid();
+    }
+
+    function seekRunway(sec, imgPath, captionText, btn) {
+      const vid = document.getElementById('runwayVideo');
+      vid.currentTime = sec;
+      vid.play().catch(() => {});
+      document.getElementById('heroStillImg').src = imgPath;
+      document.getElementById('heroStillCaption').innerText = captionText;
+      document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function openModal(id) {
+      const item = catalogItems.find(x => x.id === id);
+      if (!item) return;
+
+      document.getElementById('mPhoto').src = item.img;
+      document.getElementById('mBrand').innerText = item.brand;
+      document.getElementById('mTitle').innerText = item.name;
+      document.getElementById('mDesc').innerText = item.desc;
+      document.getElementById('mPrimaryLink').href = item.amazon;
+      document.getElementById('mSecondaryLink').href = item.shein;
+
+      const listEl = document.getElementById('mList');
+      listEl.innerHTML = '';
+      item.pieces.forEach(p => {
+        const li = document.createElement('li');
+        li.className = 'modal-piece-row';
+        li.innerHTML = `
+          <span>${p.title}</span>
+          <div class="modal-piece-links">
+            <strong>${p.price}</strong>
+            <a href="${p.url}" target="_blank" rel="noopener">Buy</a>
+          </div>
+        `;
+        listEl.appendChild(li);
+      });
+
+      const dialog = document.getElementById('quickModal');
+      dialog.showModal();
+    }
+
+    document.getElementById('quickModal').addEventListener('click', (e) => {
+      const dialog = document.getElementById('quickModal');
+      const rect = dialog.getBoundingClientRect();
+      const inside = rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+                     rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+      if (!inside) dialog.close();
+    });
+
+    renderGrid();
+  </script>
+</body>
+</html>

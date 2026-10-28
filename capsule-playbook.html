@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 16-Piece Men's Capsule Wardrobe Playbook | NOFACE ATELIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-cream: #faf9f6;
+      --text: #1a1a1a;
+      --text-muted: #666666;
+      --border: #e5e5e5;
+      --accent: #111111;
+      --font-serif: 'Bodoni Moda', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 32px;
+    }
+
+    /* COVER HEADER */
+    .playbook-header {
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    h1.title {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    .meta-bar {
+      margin-top: 24px;
+      display: flex;
+      gap: 24px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .meta-bar strong {
+      color: var(--text);
+    }
+
+    /* ACTION BAR FOR WEB VIEW */
+    .print-bar {
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .btn-print {
+      background: var(--text);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .btn-print:hover {
+      opacity: 0.85;
+    }
+
+    /* SECTION STYLING */
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2.section-heading {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p.lead-p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* 16 PIECES GRID */
+    .pieces-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .piece-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .piece-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .piece-name {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .piece-material {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .piece-role {
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    .piece-role strong {
+      color: var(--text);
+    }
+
+    /* 32 COMBINATIONS TABLE */
+    table.matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 16px;
+    }
+
+    table.matrix-table th {
+      background: var(--text);
+      color: #ffffff;
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    table.matrix-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table.matrix-table tr:nth-child(even) td {
+      background: var(--bg-cream);
+    }
+
+    .cat-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      background: #e5e5e5;
+      border-radius: 3px;
+    }
+
+    /* TAILORING CHEAT SHEET */
+    .tailor-box {
+      border: 1px solid var(--border);
+      background: var(--bg-cream);
+      padding: 28px;
+      border-radius: 6px;
+    }
+
+    .rule-item {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .rule-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .rule-item h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .rule-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        padding: 0;
+      }
+      .container {
+        max-width: 100%;
+        padding: 20px;
+      }
+      .print-bar {
+        display: none;
+      }
+      .pieces-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      section {
+        page-break-inside: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pieces-grid {
+        grid-template-columns: 1fr;
+      }
+      h1.title {
+        font-size: 32px;
+      }
+      .meta-bar {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="print-bar">
+      <div>
+        <strong style="font-size: 13px;">Official Digital Release</strong>
+        <div style="font-size: 12px; color: var(--text-muted);">Save this page to your laptop or phone as a PDF anytime.</div>
+      </div>
+      <button class="btn-print" onclick="window.print()">Print or Save as PDF</button>
+    </div>
+
+    <header class="playbook-header">
+      <span class="brand-tag">NOFACE ATELIER &middot; OFFICIAL STYLE RESOURCE</span>
+      <h1 class="title">The 16-Piece Men's Capsule Wardrobe Playbook</h1>
+      <p class="subtitle">
+        A definitive master blueprint for the modern minimalist. 16 curated garments engineered to produce 32 distinct, high-rotation outfits for city, resort, business, and evening occasions.
+      </p>
+      <div class="meta-bar">
+        <div>Edition: <strong>2026/2027</strong></div>
+        <div>Total Pieces: <strong>16 Core</strong></div>
+        <div>Outfits Unlocked: <strong>32 Combinations</strong></div>
+        <div>Aesthetic: <strong>Quiet Luxury &middot; Modern Minimalist</strong></div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: CORE PIECES -->
+    <section>
+      <h2 class="section-heading">01. The 16 Foundation Garments</h2>
+      <p class="lead-p">
+        Every garment in this list is chosen for fabric neutrality, structural compatibility, and zero seasonal obsolescence.
+      </p>
+
+      <div class="pieces-grid">
+        <div class="piece-card">
+          <div class="piece-num">Piece 01 / Shirting</div>
+          <div class="piece-name">Off-White Pinstripe Linen Button-Down</div>
+          <div class="piece-material">Fabric: 100% French Flax or Cotton-Linen Blend</div>
+          <div class="piece-role">Role: <strong>Casual City &amp; Layering Hero</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 02 / Shirting</div>
+          <div class="piece-name">Sand Beige Camp-Collar Resort Shirt</div>
+          <div class="piece-material">Fabric: Washed Linen (Relaxed Open Collar)</div>
+          <div class="piece-role">Role: <strong>High Summer &amp; Coastal Warmth</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 03 / Shirting</div>
+          <div class="piece-name">Emerald Botanical Print Cuban Collar Shirt</div>
+          <div class="piece-material">Fabric: Viscose-Cotton or Silk-Cotton Blend</div>
+          <div class="piece-role">Role: <strong>Statement Weekend &amp; Party Accent</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 04 / Knitwear</div>
+          <div class="piece-name">Espresso Brown Ribbed Knit Tee</div>
+          <div class="piece-material">Fabric: 100% Pima Cotton or Fine-Gauge Knit</div>
+          <div class="piece-role">Role: <strong>Elevated Base Layer for Blazers</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 05 / Outerwear</div>
+          <div class="piece-name">Unstructured Camel Single-Breasted Blazer</div>
+          <div class="piece-material">Fabric: Lightweight Wool-Cotton Blend</div>
+          <div class="piece-role">Role: <strong>Smart Casual Anchor &amp; Date Night</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 06 / Outerwear</div>
+          <div class="piece-name">Navy Water-Resistant Minimalist Overshirt</div>
+          <div class="piece-material">Fabric: Dense Cotton Twill with Matte Hardware</div>
+          <div class="piece-role">Role: <strong>Transit &amp; Weather Protection</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 07 / Bottoms</div>
+          <div class="piece-name">Beige Tailored Flat-Front Chino Shorts (7")</div>
+          <div class="piece-material">Fabric: 98% Cotton / 2% Elastane Stretch Twill</div>
+          <div class="piece-role">Role: <strong>Warm Weather Daytime Walking</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 08 / Bottoms</div>
+          <div class="piece-name">Olive Green Tapered Utility Cargo Shorts</div>
+          <div class="piece-material">Fabric: Lightweight Washed Poplin</div>
+          <div class="piece-role">Role: <strong>Weekend Leisure &amp; Casual Texture</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 09 / Bottoms</div>
+          <div class="piece-name">Cream Relaxed-Fit Straight Linen Trousers</div>
+          <div class="piece-material">Fabric: Heavyweight Linen with Drawstring Waist</div>
+          <div class="piece-role">Role: <strong>Old Money Resort &amp; Alfresco Dinners</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 10 / Bottoms</div>
+          <div class="piece-name">Charcoal Single-Pleated Dress Trousers</div>
+          <div class="piece-material">Fabric: High-Twist Tropical Wool or Crepe</div>
+          <div class="piece-role">Role: <strong>Formal Evening &amp; Architectural Drape</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 11 / Footwear</div>
+          <div class="piece-name">White Two-Strap Contoured Cork Slides</div>
+          <div class="piece-material">Construction: Cork Footbed with Leather Straps</div>
+          <div class="piece-role">Role: <strong>Daily Casual Summer Footwear</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 12 / Footwear</div>
+          <div class="piece-name">Tan Suede Double-Buckle Sandals</div>
+          <div class="piece-material">Construction: Oiled Suede with Brass Hardware</div>
+          <div class="piece-role">Role: <strong>Tactile Resort &amp; Poolside Comfort</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 13 / Footwear</div>
+          <div class="piece-name">Dark Espresso Leather Buckle Slides</div>
+          <div class="piece-material">Construction: Smooth Calfskin Finish</div>
+          <div class="piece-role">Role: <strong>Polished Coastal Footwear</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 14 / Footwear</div>
+          <div class="piece-name">Cream Leather Retro Court Sneakers (Gum Sole)</div>
+          <div class="piece-material">Construction: Full-Grain Leather with Natural Gum Rubber</div>
+          <div class="piece-role">Role: <strong>Smart Casual Walking &amp; Tailoring Balance</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 15 / Accessories</div>
+          <div class="piece-name">Heavyweight 16oz Cream Canvas Carryall Tote</div>
+          <div class="piece-material">Construction: Unbleached Cotton Canvas</div>
+          <div class="piece-role">Role: <strong>Market, Beach &amp; Daily Laptop Carry</strong></div>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Piece 16 / Accessories</div>
+          <div class="piece-name">Dark Brown Full-Grain Leather Weekender Tote</div>
+          <div class="piece-material">Construction: Full-Grain Leather with Structured Base</div>
+          <div class="piece-role">Role: <strong>Travel, Business &amp; Evening Elegance</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: 32 OUTFIT COMBINATION MATRIX -->
+    <section>
+      <h2 class="section-heading">02. The 32-Outfit Combination Matrix</h2>
+      <p class="lead-p">
+        How to pair the 16 pieces across 4 key lifestyle environments without repeating a look.
+      </p>
+
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Category</th>
+            <th>Top / Layer</th>
+            <th>Bottom</th>
+            <th>Footwear &amp; Bag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Pinstripe Linen Shirt (P01)</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>White Cork Slides (P11) + Canvas Tote (P15)</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Espresso Knit Tee (P04)</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Navy Overshirt (P06) over White Tank</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>Retro Court Sneakers (P14)</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Pinstripe Linen Shirt (P01) unbuttoned</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>White Cork Slides (P11)</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Sand Camp Shirt (P02)</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Navy Overshirt (P06) buttoned</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Espresso Knit Tee (P04)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td><span class="cat-badge">City Day</span></td>
+            <td>Pinstripe Linen Shirt (P01)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>White Cork Slides (P11)</td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Botanical Cuban Shirt (P03)</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Botanical Cuban Shirt (P03) open</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>White Cork Slides (P11) + Canvas Tote (P15)</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Sand Camp Shirt (P02)</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Botanical Cuban Shirt (P03)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Navy Overshirt (P06)</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Retro Court Sneakers (P14)</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Espresso Knit Tee (P04)</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Pinstripe Linen Shirt (P01) rolled sleeves</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td><span class="cat-badge">Weekend</span></td>
+            <td>Camel Blazer (P05) over White Tank</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>Retro Court Sneakers (P14)</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Sand Camp Shirt (P02)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13) + Canvas Tote (P15)</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Pinstripe Linen Shirt (P01)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Botanical Cuban Shirt (P03)</td>
+            <td>Beige Chino Shorts (P07)</td>
+            <td>Tan Suede Slides (P12)</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Sand Camp Shirt (P02)</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Espresso Knit Tee (P04)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>White Cork Slides (P11)</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Camel Blazer (P05)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13) + Leather Tote (P16)</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Navy Overshirt (P06)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td><span class="cat-badge">Resort</span></td>
+            <td>Pinstripe Linen Shirt (P01)</td>
+            <td>Olive Cargo Shorts (P08)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Camel Blazer (P05) + Espresso Tee (P04)</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Camel Blazer (P05) + Sand Shirt (P02)</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Camel Blazer (P05) + Pinstripe Shirt (P01)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Retro Court Sneakers (P14)</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Navy Overshirt (P06) + Espresso Tee (P04)</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Botanical Cuban Shirt (P03) tucked</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Pinstripe Linen Shirt (P01) buttoned</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Dark Espresso Slides (P13) + Leather Tote (P16)</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Camel Blazer (P05) + Botanical Shirt (P03)</td>
+            <td>Cream Linen Trousers (P09)</td>
+            <td>Dark Espresso Slides (P13)</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td><span class="cat-badge">Evening</span></td>
+            <td>Espresso Knit Tee (P04)</td>
+            <td>Charcoal Pleated Pants (P10)</td>
+            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 3: TAILOR'S CHEAT SHEET -->
+    <section>
+      <h2 class="section-heading">03. The Tailor's Alteration Rules</h2>
+      <p class="lead-p">
+        Fit separates quiet luxury from standard off-the-rack clothing. Hand these exact instructions to your tailor:
+      </p>
+
+      <div class="tailor-box">
+        <div class="rule-item">
+          <h4>1. Chino Shorts Hem Length (The 7-Inch Rule)</h4>
+          <p>
+            The hem must sit precisely 1.5 to 2 inches above the top of your kneecap when standing straight. Never allow shorts to touch or cover the knee. The leg opening should taper slightly to mirror your thigh width with 1 inch of slack.
+          </p>
+        </div>
+
+        <div class="rule-item">
+          <h4>2. Linen Trouser Break (No-Break or Slight Kiss)</h4>
+          <p>
+            Cream linen trousers look best with zero break: the hem should lightly touch the top of your shoe or slide without folding over. For linen's natural drape, request a 1.5-inch blind hem cuff for extra weight at the bottom.
+          </p>
+        </div>
+
+        <div class="rule-item">
+          <h4>3. Unstructured Blazer Sleeve Length</h4>
+          <p>
+            Blazer cuffs should end exactly at the wrist bone, exposing 1/4 to 1/2 inch of your shirt cuff. The jacket body must cover approximately 80% of your seat (not cropped, not overcoat length).
+          </p>
+        </div>
+
+        <div class="rule-item">
+          <h4>4. Pleated Trousers Rise &amp; Drape</h4>
+          <p>
+            Pleated charcoal trousers must sit at your natural waist (just below the navel), not on the hips. This ensures the single pleat stays flat while standing and opens cleanly when seated.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FABRIC CARE -->
+    <section>
+      <h2 class="section-heading">04. Fabric Care &amp; Longevity</h2>
+      <p class="lead-p">
+        Proper laundering ensures these 16 pieces look better over time rather than wearing out:
+      </p>
+
+      <div class="pieces-grid">
+        <div class="piece-card">
+          <div class="piece-num">Linen Care</div>
+          <div class="piece-name">Washing &amp; Ironing French Flax</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+            Always wash linen in cold water on a delicate cycle. Never use high heat in a dryer (hang dry only). To achieve the signature casual drape, steam while slightly damp rather than pressing flat with a heavy iron.
+          </p>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Leather Care</div>
+          <div class="piece-name">Slides &amp; Tote Bag Conditioning</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+            Apply a neutral beeswax or lanolin leather balm once every 3 months. Wipe with a dry microfiber cloth after rain exposure. Store totes stuffed with tissue to maintain structural silhouette.
+          </p>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Footwear Maintenance</div>
+          <div class="piece-name">Cork Footbed Sealing</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+            Apply cork sealant to the exposed edges of your sandals once a year to prevent water penetration and cracking. Clean white sneaker leather with gentle foam and a soft horsehair brush.
+          </p>
+        </div>
+
+        <div class="piece-card">
+          <div class="piece-num">Tailoring Maintenance</div>
+          <div class="piece-name">Blazer Care (Dry Clean Sparingly)</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
+            Do not dry clean your unstructured blazer more than twice a year. Frequent chemical cleaning degrades wool fibers. Use a garment steamer between wears to release wrinkles and eliminate odors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer style="border-top: 1px solid var(--border); padding-top: 32px; font-size: 12px; color: var(--text-muted); text-align: center;">
+      &copy; 2026 NOFACE ATELIER. All rights reserved. Curated for the modern minimalist.
+    </footer>
+
+  </div>
+
+</body>
+</html>
