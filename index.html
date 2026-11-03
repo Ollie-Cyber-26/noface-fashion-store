@@ -843,7 +843,7 @@
       <div class="header-search">
         <input type="text" placeholder="Search COOFANDY, blazer, linen, loafers..." oninput="searchCatalog(this.value)" />
       </div>
-      <a href="#" class="brand-wordmark">NOFACE</a>
+      <a href="#" class="brand-wordmark" onclick="showHome(); return false;" title="Back to Runway Intro">NOFACE</a>
       <div class="header-utils">
         <button class="util-btn" onclick="filterBy('saved')">Saved (<span id="savedCounter">0</span>)</button>
         <a href="capsule-playbook.html" target="_blank" class="util-btn">16-Piece Playbook ($12)</a>
@@ -861,7 +861,7 @@
   </header>
 
   <!-- EDITORIAL HERO -->
-  <section class="editorial-hero">
+  <section class="editorial-hero" id="heroSection">
     <div class="hero-container">
       <div class="hero-text-col">
         <div class="hero-kicker">The 2026 Menswear Capsule Edit</div>
@@ -870,7 +870,7 @@
           We test and curate the highest-rated smart casual menswear on Amazon so you never waste time guessing. Watch the 4 complete runway looks or shop all 32 individual bestselling garments below.
         </p>
         <div class="hero-actions">
-          <a href="#catalogSection" class="btn-primary">Shop All 36 Pieces</a>
+          <a href="#catalogSection" class="btn-primary" onclick="filterBy('all', document.querySelector('.nav-bar button')); return false;">Shop All 36 Pieces</a>
           <a href="capsule-playbook.html" target="_blank" class="btn-outline">16-Piece Wardrobe Guide ($12)</a>
         </div>
         <div class="look-chapter-links">
@@ -900,7 +900,7 @@
   </section>
 
   <!-- BUYER TRUST BAR -->
-  <section class="trust-strip">
+  <section class="trust-strip" id="trustSection">
     <div class="trust-inner">
       <div class="trust-item">
         <span class="trust-title">1. Verified Amazon Bestsellers</span>
@@ -924,9 +924,10 @@
   <!-- MAIN PRODUCT GRID -->
   <main class="catalog-wrapper" id="catalogSection">
     <div class="catalog-header">
-      <div class="catalog-title-group">
-        <h2>The Curated Menswear Edit</h2>
+      <div class="catalog-title-group" style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+        <h2 id="catalogHeading" style="margin-right: 0;">The Curated Menswear Edit</h2>
         <span class="item-count" id="visibleCount">36 Items</span>
+        <button id="showHeroBtn" class="btn-quick-info" style="display: none; margin-left: 8px;" onclick="showHome()">Show Runway Video</button>
       </div>
       <div class="sort-control">
         <span>Sort By</span>
@@ -1929,13 +1930,44 @@
       renderGrid();
     }
 
+    const categoryTitles = {
+      all: 'All Curated Menswear',
+      look: 'Complete 4-Piece Runway Looks',
+      shirting: 'Shirting & Tailored Blazers',
+      trousers: 'Trousers & Tailored Shorts',
+      footwear: 'Footwear & Contoured Slides',
+      accessories: 'Bags, Timepieces & Accessories',
+      saved: 'Your Saved Pieces'
+    };
+
     function filterBy(type, btn) {
       activeFilter = type;
       if (btn) {
         document.querySelectorAll('.nav-bar button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
       }
+      document.getElementById('heroSection').style.display = 'none';
+      document.getElementById('trustSection').style.display = 'none';
+      document.getElementById('showHeroBtn').style.display = 'inline-block';
+      document.getElementById('catalogHeading').innerText = categoryTitles[type] || 'The Curated Menswear Edit';
       renderGrid();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHome() {
+      activeFilter = 'all';
+      searchQuery = '';
+      const searchInput = document.querySelector('.header-search input');
+      if (searchInput) searchInput.value = '';
+      document.querySelectorAll('.nav-bar button').forEach((b, idx) => {
+        b.classList.toggle('active', idx === 0);
+      });
+      document.getElementById('heroSection').style.display = '';
+      document.getElementById('trustSection').style.display = '';
+      document.getElementById('showHeroBtn').style.display = 'none';
+      document.getElementById('catalogHeading').innerText = 'The Curated Menswear Edit';
+      renderGrid();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function sortGrid(val) {
@@ -1945,6 +1977,11 @@
 
     function searchCatalog(q) {
       searchQuery = q.toLowerCase().trim();
+      if (searchQuery.length > 0) {
+        document.getElementById('heroSection').style.display = 'none';
+        document.getElementById('trustSection').style.display = 'none';
+        document.getElementById('showHeroBtn').style.display = 'inline-block';
+      }
       renderGrid();
     }
 
