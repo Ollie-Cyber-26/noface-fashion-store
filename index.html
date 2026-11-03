@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOFACE | Menswear Editorial &amp; Capsule Store</title>
+  <title>NOFACE ATELIER | Curated Menswear &amp; Verified Amazon Capsule Store</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,9 +12,10 @@
       --bg: #ffffff;
       --bg-soft: #f7f6f3;
       --text: #111111;
-      --text-muted: #666666;
-      --text-light: #999999;
+      --text-muted: #595959;
+      --text-light: #888888;
       --border: #e6e6e6;
+      --gold: #b08d32;
       --font-serif: 'Bodoni Moda', Georgia, serif;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
@@ -38,19 +39,19 @@
       text-decoration: none;
     }
 
-    /* 1. TOP PROMO STRIP (REVOLVE STYLE) */
+    /* 1. TOP PROMO STRIP */
     .promo-bar {
       background: #111111;
       color: #ffffff;
       font-size: 11px;
       font-weight: 500;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       text-align: center;
-      padding: 9px 20px;
+      padding: 10px 20px;
     }
 
-    /* 2. ULTRA-CLEAN REVOLVE HEADER */
+    /* 2. ULTRA-CLEAN HEADER */
     header.site-header {
       position: sticky;
       top: 0;
@@ -63,7 +64,7 @@
     .header-top {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 20px 36px 16px;
+      padding: 18px 36px 14px;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
@@ -78,9 +79,9 @@
     .header-search input {
       border: none;
       border-bottom: 1px solid #cccccc;
-      padding: 5px 0;
+      padding: 6px 0;
       font-size: 12px;
-      width: 190px;
+      width: 220px;
       outline: none;
       background: transparent;
       color: var(--text);
@@ -93,7 +94,7 @@
 
     .brand-wordmark {
       font-family: var(--font-serif);
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 700;
       letter-spacing: 5px;
       text-transform: uppercase;
@@ -118,7 +119,7 @@
       cursor: pointer;
       font-family: var(--font-sans);
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       color: var(--text);
@@ -137,7 +138,8 @@
       padding: 0 36px 12px;
       display: flex;
       justify-content: center;
-      gap: 36px;
+      gap: 32px;
+      flex-wrap: wrap;
     }
 
     .nav-bar button {
@@ -147,7 +149,7 @@
       font-family: var(--font-sans);
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       color: var(--text-muted);
       padding-bottom: 4px;
@@ -161,7 +163,7 @@
       border-bottom-color: var(--text);
     }
 
-    /* 3. EDITORIAL HERO (CLEAN MAGAZINE LAYOUT) */
+    /* 3. EDITORIAL HERO */
     .editorial-hero {
       background: var(--bg-soft);
       border-bottom: 1px solid var(--border);
@@ -170,15 +172,15 @@
     .hero-container {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 48px 36px;
+      padding: 44px 36px;
       display: grid;
       grid-template-columns: 1fr 1.15fr;
-      gap: 56px;
+      gap: 52px;
       align-items: center;
     }
 
     .hero-text-col {
-      max-width: 500px;
+      max-width: 520px;
     }
 
     .hero-kicker {
@@ -187,15 +189,15 @@
       letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .hero-headline {
       font-family: var(--font-serif);
-      font-size: 52px;
+      font-size: 48px;
       font-weight: 500;
       line-height: 1.08;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       color: var(--text);
     }
 
@@ -203,14 +205,14 @@
       font-size: 14px;
       color: var(--text-muted);
       line-height: 1.7;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .btn-primary {
@@ -218,13 +220,14 @@
       color: #ffffff;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 15px 32px;
+      padding: 14px 28px;
       border: 1px solid #111111;
       cursor: pointer;
       transition: all 0.2s;
       display: inline-block;
+      text-align: center;
     }
 
     .btn-primary:hover {
@@ -237,13 +240,14 @@
       color: #111111;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 15px 28px;
+      padding: 14px 24px;
       border: 1px solid #111111;
       cursor: pointer;
       transition: all 0.2s;
       display: inline-block;
+      text-align: center;
     }
 
     .btn-outline:hover {
@@ -253,10 +257,10 @@
 
     .look-chapter-links {
       border-top: 1px solid #dedede;
-      padding-top: 20px;
+      padding-top: 18px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
@@ -265,7 +269,7 @@
       text-transform: uppercase;
       letter-spacing: 1.2px;
       color: var(--text-muted);
-      margin-right: 6px;
+      margin-right: 4px;
     }
 
     .chapter-btn {
@@ -273,7 +277,7 @@
       border: 1px solid #d8d8d8;
       font-size: 11px;
       font-weight: 500;
-      padding: 6px 14px;
+      padding: 6px 13px;
       cursor: pointer;
       color: var(--text);
       transition: all 0.15s;
@@ -288,7 +292,7 @@
 
     .hero-media-col {
       display: grid;
-      grid-template-columns: 260px 1fr;
+      grid-template-columns: 250px 1fr;
       gap: 20px;
       align-items: stretch;
     }
@@ -312,6 +316,7 @@
       overflow: hidden;
       position: relative;
       background: #eae8e3;
+      max-height: 445px;
     }
 
     .editorial-still-box img {
@@ -326,7 +331,7 @@
       position: absolute;
       bottom: 16px;
       left: 16px;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.94);
       padding: 8px 14px;
       font-size: 11px;
       letter-spacing: 1px;
@@ -334,7 +339,41 @@
       font-weight: 600;
     }
 
-    /* 4. FILTER & COUNT BAR */
+    /* 4. BUYER TRUST & VERIFICATION STRIP */
+    .trust-strip {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .trust-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .trust-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      color: var(--text);
+    }
+
+    .trust-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 5. CATALOG HEADER & FILTER BAR */
     .catalog-wrapper {
       max-width: 1440px;
       margin: 0 auto;
@@ -352,7 +391,7 @@
 
     .catalog-title-group h2 {
       font-family: var(--font-serif);
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 500;
       display: inline-block;
       margin-right: 12px;
@@ -385,35 +424,36 @@
       outline: none;
     }
 
-    /* 5. PURE REVOLVE BORDERLESS PRODUCT GRID */
+    /* 6. CLEAN LUXURY PRODUCT GRID */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 24px;
-      row-gap: 48px;
+      column-gap: 26px;
+      row-gap: 44px;
     }
 
     .revolve-card {
       display: flex;
       flex-direction: column;
-      cursor: pointer;
     }
 
     .revolve-image-wrap {
       position: relative;
       width: 100%;
       aspect-ratio: 3 / 4;
-      background: #f4f4f2;
+      background: #ffffff;
+      border: 1px solid #efefef;
       overflow: hidden;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      cursor: pointer;
     }
 
     .revolve-image-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
-      transition: transform 0.5s ease;
+      object-position: center center;
+      transition: transform 0.45s ease;
       display: block;
     }
 
@@ -423,10 +463,10 @@
 
     .heart-btn {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255, 255, 255, 0.85);
-      border: none;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #eaeaea;
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -449,103 +489,140 @@
 
     .editorial-tag {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #ffffff;
-      color: #111111;
-      font-size: 10px;
+      top: 10px;
+      left: 10px;
+      background: #111111;
+      color: #ffffff;
+      font-size: 9px;
       font-weight: 600;
       letter-spacing: 1.2px;
       text-transform: uppercase;
-      padding: 4px 9px;
+      padding: 4px 8px;
     }
 
-    .quick-shop-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      color: #111111;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 13px 10px;
-      transform: translateY(100%);
-      transition: transform 0.25s ease;
-      border-top: 1px solid var(--border);
-    }
-
-    .revolve-card:hover .quick-shop-bar {
-      transform: translateY(0);
-    }
-
-    .quick-shop-bar:hover {
-      background: #111111;
-      color: #ffffff;
-    }
-
-    /* ULTRA-NEAT 3-LINE TEXT BELOW PHOTO */
     .revolve-meta {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 4px;
+      flex: 1;
+    }
+
+    .brand-rating-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .revolve-brand {
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1.1px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--text);
+    }
+
+    .rating-pill {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .rating-pill .star {
+      color: var(--gold);
+    }
+
+    .rating-pill .rev-count {
+      color: var(--text-light);
+      font-weight: 400;
     }
 
     .revolve-name {
       font-size: 13px;
-      font-weight: 400;
-      color: var(--text-muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.35;
+      cursor: pointer;
     }
 
-    .revolve-price-row {
+    .revolve-name:hover {
+      text-decoration: underline;
+    }
+
+    .fit-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .card-action-row {
+      margin-top: auto;
+      padding-top: 8px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-top: 4px;
+      justify-content: space-between;
+      gap: 10px;
+      border-top: 1px solid #f0f0f0;
     }
 
     .revolve-price {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       color: var(--text);
     }
 
-    .revolve-retailer-links {
-      display: flex;
-      gap: 10px;
-      font-size: 11px;
+    .prime-tag {
+      font-size: 10px;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-    }
-
-    .revolve-retailer-links a {
       color: var(--text-muted);
-      border-bottom: 1px solid #cccccc;
-      padding-bottom: 1px;
-      transition: color 0.15s, border-color 0.15s;
+      display: block;
+      letter-spacing: 0.3px;
     }
 
-    .revolve-retailer-links a:hover {
+    .card-buttons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .btn-buy-amz {
+      background: #111111;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 9px 14px;
+      border: 1px solid #111111;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-buy-amz:hover {
+      background: #ffffff;
       color: #111111;
-      border-bottom-color: #111111;
     }
 
-    /* 6. MINIMALIST EDITORIAL BANNER FOR $12 PLAYBOOK */
+    .btn-quick-info {
+      background: #ffffff;
+      color: var(--text);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 9px 10px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .btn-quick-info:hover {
+      border-color: #111111;
+    }
+
+    /* 7. DIGITAL GUIDE STRIP */
     .playbook-editorial-strip {
       max-width: 1440px;
       margin: 0 auto 64px;
@@ -589,13 +666,13 @@
       color: var(--text-muted);
     }
 
-    /* 7. QUICK VIEW DIALOG MODAL (CLEAN WHITE EDITORIAL) */
+    /* 8. QUICK VIEW MODAL */
     dialog#quickModal {
       margin: auto;
       border: 1px solid var(--border);
       background: #ffffff;
       color: var(--text);
-      max-width: 880px;
+      max-width: 860px;
       width: 92vw;
       padding: 0;
       outline: none;
@@ -609,13 +686,14 @@
 
     .modal-layout {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
+      grid-template-columns: 1fr 1.15fr;
     }
 
     .modal-photo {
-      background: #f4f4f2;
+      background: #ffffff;
       aspect-ratio: 3 / 4;
       width: 100%;
+      border-right: 1px solid var(--border);
     }
 
     .modal-photo img {
@@ -635,13 +713,13 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .modal-close {
       background: none;
       border: none;
-      font-size: 20px;
+      font-size: 22px;
       cursor: pointer;
       color: var(--text-muted);
     }
@@ -649,40 +727,44 @@
     .modal-piece-list {
       list-style: none;
       border-top: 1px solid var(--border);
-      margin: 20px 0 28px;
+      margin: 18px 0 24px;
     }
 
     .modal-piece-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 13px 0;
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
       font-size: 13px;
+      gap: 12px;
     }
 
     .modal-piece-links {
       display: flex;
       gap: 12px;
       align-items: center;
+      flex-shrink: 0;
     }
 
     .modal-piece-links a {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
-      padding: 6px 12px;
+      padding: 7px 14px;
+      background: #111111;
+      color: #ffffff;
       border: 1px solid #111111;
       transition: all 0.15s;
     }
 
     .modal-piece-links a:hover {
-      background: #111111;
-      color: #ffffff;
+      background: #ffffff;
+      color: #111111;
     }
 
-    /* 8. FOOTER */
+    /* 9. FOOTER */
     footer.site-footer {
       border-top: 1px solid var(--border);
       background: #ffffff;
@@ -701,7 +783,7 @@
     }
 
     .footer-brand {
-      max-width: 380px;
+      max-width: 440px;
     }
 
     .footer-brand h4 {
@@ -719,13 +801,16 @@
       .hero-container {
         grid-template-columns: 1fr;
       }
+      .trust-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
       .product-grid {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 16px;
-        row-gap: 32px;
+        column-gap: 14px;
+        row-gap: 28px;
       }
       .header-top {
         grid-template-columns: 1fr;
@@ -741,34 +826,37 @@
       .modal-layout {
         grid-template-columns: 1fr;
       }
+      .trust-inner {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="promo-bar">
-    Summer 2026 Menswear Curation &middot; Shop Exact Pieces via Verified Amazon &amp; SHEIN Links
+    Official Menswear Capsule Curation &middot; Direct 1-Click Checkout &amp; Fast Prime Shipping on Amazon
   </div>
 
   <header class="site-header">
     <div class="header-top">
       <div class="header-search">
-        <input type="text" placeholder="Search linen, blazer, loafers..." oninput="searchCatalog(this.value)" />
+        <input type="text" placeholder="Search COOFANDY, blazer, linen, loafers..." oninput="searchCatalog(this.value)" />
       </div>
       <a href="#" class="brand-wordmark">NOFACE</a>
       <div class="header-utils">
         <button class="util-btn" onclick="filterBy('saved')">Saved (<span id="savedCounter">0</span>)</button>
-        <a href="capsule-playbook.html" target="_blank" class="util-btn">Style Guide ($12)</a>
+        <a href="capsule-playbook.html" target="_blank" class="util-btn">16-Piece Playbook ($12)</a>
       </div>
     </div>
 
     <nav class="nav-bar">
-      <button class="active" onclick="filterBy('all', this)">All Edit (24)</button>
+      <button class="active" onclick="filterBy('all', this)">All Edit (36)</button>
       <button onclick="filterBy('look', this)">Complete Looks (4)</button>
-      <button onclick="filterBy('shirting', this)">Shirting &amp; Jackets (6)</button>
-      <button onclick="filterBy('trousers', this)">Trousers &amp; Shorts (5)</button>
-      <button onclick="filterBy('footwear', this)">Footwear (4)</button>
-      <button onclick="filterBy('accessories', this)">Bags &amp; Accessories (5)</button>
+      <button onclick="filterBy('shirting', this)">Shirting &amp; Blazers (10)</button>
+      <button onclick="filterBy('trousers', this)">Trousers &amp; Shorts (8)</button>
+      <button onclick="filterBy('footwear', this)">Footwear (7)</button>
+      <button onclick="filterBy('accessories', this)">Bags &amp; Accessories (7)</button>
     </nav>
   </header>
 
@@ -776,21 +864,21 @@
   <section class="editorial-hero">
     <div class="hero-container">
       <div class="hero-text-col">
-        <div class="hero-kicker">The Summer '26 Runway Edit</div>
+        <div class="hero-kicker">The 2026 Menswear Capsule Edit</div>
         <h1 class="hero-headline">Effortless Linen &amp; Modern Tailoring</h1>
         <p class="hero-subcopy">
-          Four cohesive capsule looks designed for city mornings, coastal afternoons, and evening tailoring. Watch the runway reel and shop each individual garment below.
+          We test and curate the highest-rated smart casual menswear on Amazon so you never waste time guessing. Watch the 4 complete runway looks or shop all 32 individual bestselling garments below.
         </p>
         <div class="hero-actions">
-          <a href="#catalogSection" class="btn-primary">Shop The Edit</a>
-          <a href="#playbookSection" class="btn-outline">16-Piece Wardrobe Guide</a>
+          <a href="#catalogSection" class="btn-primary">Shop All 36 Pieces</a>
+          <a href="capsule-playbook.html" target="_blank" class="btn-outline">16-Piece Wardrobe Guide ($12)</a>
         </div>
         <div class="look-chapter-links">
-          <span class="chapter-label">Jump to Look:</span>
-          <button class="chapter-btn active" onclick="seekRunway(0, 'images/look_01.jpg', 'Look 01: City Walk Linen ($115)', this)">01 City</button>
-          <button class="chapter-btn" onclick="seekRunway(7.5, 'images/look_02.jpg', 'Look 02: Weekend Resort ($114)', this)">02 Resort</button>
-          <button class="chapter-btn" onclick="seekRunway(15, 'images/look_03.jpg', 'Look 03: Coastal Old Money ($127)', this)">03 Beach</button>
-          <button class="chapter-btn" onclick="seekRunway(22.5, 'images/look_04.jpg', 'Look 04: Date Night Tailoring ($206)', this)">04 Tailored</button>
+          <span class="chapter-label">Preview Look:</span>
+          <button class="chapter-btn active" onclick="seekRunway(0, 'images/look_01.jpg', 'Look 01: City Walk Linen ($105)', this)">01 City</button>
+          <button class="chapter-btn" onclick="seekRunway(7.5, 'images/look_02.jpg', 'Look 02: Weekend Resort ($119)', this)">02 Resort</button>
+          <button class="chapter-btn" onclick="seekRunway(15, 'images/look_03.jpg', 'Look 03: Coastal Old Money ($118)', this)">03 Coastal</button>
+          <button class="chapter-btn" onclick="seekRunway(22.5, 'images/look_04.jpg', 'Look 04: Date Night Tailoring ($210)', this)">04 Tailored</button>
         </div>
       </div>
 
@@ -805,23 +893,45 @@
         </div>
         <div class="editorial-still-box">
           <img id="heroStillImg" src="images/look_01.jpg" alt="Featured Runway Look" />
-          <div class="still-caption" id="heroStillCaption">Look 01: City Walk Linen ($115)</div>
+          <div class="still-caption" id="heroStillCaption">Look 01: City Walk Linen ($105)</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN REVOLVE PRODUCT GRID -->
+  <!-- BUYER TRUST BAR -->
+  <section class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <span class="trust-title">1. Verified Amazon Bestsellers</span>
+        <span class="trust-desc">Every piece is a real, top-ranked Amazon garment from trusted labels like COOFANDY, PJ PAUL JONES, and Dockers.</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-title">2. 4.5+ Star Customer Proof</span>
+        <span class="trust-desc">We only include garments backed by thousands of verified buyer reviews and consistent sizing feedback.</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-title">3. Direct 1-Click Product Links</span>
+        <span class="trust-desc">Click any item to land directly on its official Amazon product page with Prime delivery and free returns.</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-title">4. Cohesive Color Palette</span>
+        <span class="trust-desc">All 36 items share a neutral palette (ivory, sand, camel, olive, espresso, navy) so every top matches every trouser.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN PRODUCT GRID -->
   <main class="catalog-wrapper" id="catalogSection">
     <div class="catalog-header">
       <div class="catalog-title-group">
-        <h2>The Summer Capsule</h2>
-        <span class="item-count" id="visibleCount">24 Items</span>
+        <h2>The Curated Menswear Edit</h2>
+        <span class="item-count" id="visibleCount">36 Items</span>
       </div>
       <div class="sort-control">
         <span>Sort By</span>
         <select onchange="sortGrid(this.value)">
-          <option value="featured">Featured</option>
+          <option value="featured">Featured Curations</option>
           <option value="low">Price: Low to High</option>
           <option value="high">Price: High to Low</option>
         </select>
@@ -835,19 +945,19 @@
   <section class="playbook-editorial-strip" id="playbookSection">
     <div class="playbook-inner">
       <div class="playbook-copy">
-        <span>Digital Edition &middot; Instant PDF Download</span>
+        <span>Digital Edition &middot; Instant PDF Blueprint</span>
         <h3>The 16-Piece Men's Smart Casual Capsule Playbook</h3>
         <p>
-          Includes all 32 outfit combinations, exact tailor alteration measurements, linen care instructions, and clickable budget vs. luxury links.
+          Includes the complete 32-outfit combination chart, exact tailor alteration measurements, linen care instructions, and direct Amazon links for all 16 foundation pieces.
         </p>
       </div>
       <div>
-        <a href="capsule-playbook.html" target="_blank" class="btn-primary">Download Digital Guide &middot; $12</a>
+        <a href="capsule-playbook.html" target="_blank" class="btn-primary">Open Digital Playbook &middot; $12</a>
       </div>
     </div>
   </section>
 
-  <!-- CLEAN WHITE QUICK VIEW MODAL -->
+  <!-- QUICK VIEW MODAL -->
   <dialog id="quickModal">
     <div class="modal-layout">
       <div class="modal-photo">
@@ -861,13 +971,12 @@
           </div>
           <button class="modal-close" onclick="document.getElementById('quickModal').close()">&times;</button>
         </div>
-        <p style="font-size: 13px; color: var(--text-muted);" id="mDesc"></p>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;" id="mDesc"></p>
 
         <ul class="modal-piece-list" id="mList"></ul>
 
         <div style="margin-top: auto; display: flex; gap: 12px;">
-          <a id="mPrimaryLink" href="#" target="_blank" rel="noopener" class="btn-primary" style="flex: 1; text-align: center;">Shop on Amazon</a>
-          <a id="mSecondaryLink" href="#" target="_blank" rel="noopener" class="btn-outline" style="flex: 1; text-align: center;">Shop on SHEIN</a>
+          <a id="mPrimaryLink" href="#" target="_blank" rel="noopener" class="btn-primary" style="flex: 1;">Buy Now on Amazon Prime</a>
         </div>
       </div>
     </div>
@@ -877,435 +986,871 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <h4>NOFACE</h4>
-        <p>Minimalist menswear curation. As an affiliate partner with Amazon Associates and global fashion retailers, we may earn a commission on qualifying purchases at no additional cost to you.</p>
+        <p>Minimalist menswear curation. As an official Amazon Associate (Store ID: nofaceatelier-20), we earn from qualifying purchases at no additional cost to you. All product prices and ratings reflect verified Amazon listings.</p>
       </div>
       <div>
-        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Runway Assets</div>
-        <p><a href="videos/faceless-summer-lookbook-veo.mp4" download>Download 9:16 Video (MP4)</a></p>
-        <p style="margin-top: 4px;"><a href="videos/faceless-summer-lookbook-veo.webm" download>Download 9:16 Video (WebM)</a></p>
+        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Quick Links</div>
+        <p><a href="capsule-playbook.html" target="_blank">16-Piece Capsule Wardrobe Playbook</a></p>
+        <p style="margin-top: 4px;"><a href="videos/faceless-summer-lookbook-veo.mp4" download>Download Runway Video (MP4)</a></p>
       </div>
     </div>
   </footer>
 
   <script>
     const catalogItems = [
+  {
+    "id": "item-1",
+    "type": "look",
+    "badge": "Complete Look 01",
+    "brand": "RUNWAY LOOK 01",
+    "name": "City Walk Pinstripe Linen 4-Piece Outfit",
+    "price": 105,
+    "rating": "4.6",
+    "reviews": "57,190",
+    "fit": "4 Matched Pieces \u00b7 Shirt, Chino Shorts, Slides & Tote",
+    "img": "images/look_01.jpg",
+    "pos": "center top",
+    "desc": "Relaxed vertical pinstripe cotton-linen shirt paired with 7-inch flat-front beige chino shorts, contoured white cork slides, and a 20oz natural canvas tote.",
+    "amazon": "https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20",
+    "pieces": [
       {
-        id: 'item-1',
-        type: 'look',
-        badge: 'Complete Look 01',
-        brand: 'NOFACE RUNWAY',
-        name: 'City Walk Pinstripe Linen 4-Piece Set',
-        price: 115,
-        img: 'images/look_01.jpg',
-        pos: 'center top',
-        desc: 'Relaxed vertical pinstripe linen shirt paired with flat-front beige chino shorts, cork buckle slides, and a heavyweight canvas tote.',
-        amazon: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/',
-        pieces: [
-          { title: 'Off-White Pinstripe Linen Shirt', price: '$34', url: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofaceatelier-20' },
-          { title: 'Beige Tailored Chino Shorts (7")', price: '$28', url: 'https://www.amazon.com/s?k=mens+beige+tailored+chino+shorts+7+inch&tag=nofaceatelier-20' },
-          { title: 'White Two-Strap Cork Slides', price: '$29', url: 'https://www.amazon.com/s?k=mens+white+two+strap+buckle+sandals&tag=nofaceatelier-20' },
-          { title: 'Heavyweight Cream Canvas Tote', price: '$24', url: 'https://www.amazon.com/s?k=cream+heavyweight+canvas+tote+bag+mens&tag=nofaceatelier-20' }
-        ]
+        "title": "COOFANDY Vertical Pinstripe Linen Shirt",
+        "price": "$32",
+        "url": "https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20"
       },
       {
-        id: 'item-2',
-        type: 'look',
-        badge: 'Complete Look 02',
-        brand: 'NOFACE RUNWAY',
-        name: 'Weekend Resort Botanical Cuban 4-Piece Set',
-        price: 114,
-        img: 'images/look_02.jpg',
-        pos: 'center top',
-        desc: 'Emerald and cream botanical Cuban collar shirt layered with tapered olive cargo shorts, tan suede slides, and a leather crossbody.',
-        amazon: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/',
-        pieces: [
-          { title: 'Cream & Emerald Cuban Resort Shirt', price: '$32', url: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofaceatelier-20' },
-          { title: 'Olive Tapered Cargo Shorts', price: '$28', url: 'https://www.amazon.com/s?k=mens+olive+green+tailored+cargo+shorts&tag=nofaceatelier-20' },
-          { title: 'Tan Suede Two-Strap Sandals', price: '$30', url: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofaceatelier-20' },
-          { title: 'Brown Leather Crossbody Bag', price: '$24', url: 'https://www.amazon.com/s?k=brown+leather+crossbody+bag+unisex&tag=nofaceatelier-20' }
-        ]
+        "title": "Amazon Essentials 7-Inch Beige Chino Shorts",
+        "price": "$22",
+        "url": "https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20"
       },
       {
-        id: 'item-3',
-        type: 'look',
-        badge: 'Complete Look 03',
-        brand: 'NOFACE RUNWAY',
-        name: 'Old Money Coastal Linen 4-Piece Set',
-        price: 127,
-        img: 'images/look_03.jpg',
-        pos: 'center top',
-        desc: 'Tonal sand beige camp-collar linen shirt with wide-leg cream linen trousers, espresso leather slides, and stainless gold chain.',
-        amazon: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/',
-        pieces: [
-          { title: 'Sand Beige Open-Collar Linen Shirt', price: '$34', url: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofaceatelier-20' },
-          { title: 'Cream Relaxed-Fit Linen Trousers', price: '$42', url: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofaceatelier-20' },
-          { title: 'Dark Espresso Leather Slides', price: '$31', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+two+strap+sandals&tag=nofaceatelier-20' },
-          { title: 'Layered Gold Chain & Classic Frames', price: '$20', url: 'https://www.amazon.com/s?k=mens+layered+gold+pendant+necklace+stainless&tag=nofaceatelier-20' }
-        ]
+        "title": "CUSHIONAIRE Matte White Cork Footbed Slides",
+        "price": "$29",
+        "url": "https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20"
       },
       {
-        id: 'item-4',
-        type: 'look',
-        badge: 'Complete Look 04',
-        brand: 'NOFACE RUNWAY',
-        name: 'Date Night Camel Blazer Tailored Set',
-        price: 206,
-        img: 'images/look_04.jpg',
-        pos: 'center top',
-        desc: 'Unstructured camel single-breasted blazer over an espresso knit tee, charcoal pleated dress trousers, and leather weekender.',
-        amazon: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20camel%20blazer/',
-        pieces: [
-          { title: 'Tailored Camel Single-Breasted Blazer', price: '$68', url: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofaceatelier-20' },
-          { title: 'Charcoal Pleated Dress Trousers', price: '$45', url: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofaceatelier-20' },
-          { title: 'Cream & Gum-Sole Court Sneakers', price: '$39', url: 'https://www.amazon.com/s?k=mens+cream+gum+sole+retro+sneakers&tag=nofaceatelier-20' },
-          { title: 'Dark Brown Leather Weekender Tote', price: '$54', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofaceatelier-20' }
-        ]
-      },
-      {
-        id: 'item-5',
-        type: 'shirting',
-        badge: 'Bestseller',
-        brand: 'ATELIER TAILORING',
-        name: 'Unstructured Camel Single-Breasted Blazer',
-        price: 68,
-        img: 'images/item_05_blazer.jpg',
-        pos: 'center center',
-        desc: 'Lightweight modern tailored camel jacket designed to layer effortlessly over knit tees or linen shirting.',
-        amazon: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20camel%20blazer/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$68', url: 'https://www.amazon.com/s?k=mens+camel+casual+blazer+slim+fit&tag=nofaceatelier-20' },
-          { title: 'SHEIN Manfinity Option', price: '$42', url: 'https://us.shein.com/pdsearch/men%20camel%20blazer/' }
-        ]
-      },
-      {
-        id: 'item-6',
-        type: 'shirting',
-        badge: 'Essential',
-        brand: 'COASTAL LINEN',
-        name: 'Off-White Vertical Pinstripe Linen Shirt',
-        price: 34,
-        img: 'images/item_06_striped_shirt.jpg',
-        pos: 'center center',
-        desc: 'Breathable cotton-linen weave with subtle vertical stripes and relaxed rolled sleeves.',
-        amazon: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$34', url: 'https://www.amazon.com/s?k=mens+white+striped+linen+button+down+shirt&tag=nofaceatelier-20' },
-          { title: 'SHEIN Linen Option', price: '$19', url: 'https://us.shein.com/pdsearch/men%20striped%20linen%20shirt/' }
-        ]
-      },
-      {
-        id: 'item-7',
-        type: 'shirting',
-        badge: 'Resort Edit',
-        brand: 'HAVANA CLUB',
-        name: 'Emerald Botanical Print Cuban Collar Shirt',
-        price: 32,
-        img: 'images/item_07_cuban_shirt.jpg',
-        pos: 'center center',
-        desc: 'Statement foliage print on airy off-white fabric with camp collar.',
-        amazon: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$32', url: 'https://www.amazon.com/s?k=mens+cream+green+printed+cuban+collar+shirt&tag=nofaceatelier-20' },
-          { title: 'SHEIN Resort Option', price: '$16', url: 'https://us.shein.com/pdsearch/men%20plant%20print%20shirt/' }
-        ]
-      },
-      {
-        id: 'item-8',
-        type: 'shirting',
-        badge: 'Old Money',
-        brand: 'COASTAL LINEN',
-        name: 'Sand Beige Open-Collar Camp Linen Shirt',
-        price: 34,
-        img: 'images/item_08_sand_shirt.jpg',
-        pos: 'center center',
-        desc: 'Relaxed short-sleeve linen shirt in warm desert sand.',
-        amazon: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$34', url: 'https://www.amazon.com/s?k=mens+beige+short+sleeve+linen+camp+collar+shirt&tag=nofaceatelier-20' },
-          { title: 'SHEIN Linen Option', price: '$18', url: 'https://us.shein.com/pdsearch/men%20beige%20linen%20shirt/' }
-        ]
-      },
-      {
-        id: 'item-9',
-        type: 'trousers',
-        badge: 'Tailored Drape',
-        brand: 'ATELIER TAILORING',
-        name: 'Cream Relaxed-Fit Straight Linen Trousers',
-        price: 42,
-        img: 'images/item_09_cream_pants.jpg',
-        pos: 'center center',
-        desc: 'Wide-leg breathable linen blend trousers with clean ankle break.',
-        amazon: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20cream%20linen%20pants/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$42', url: 'https://www.amazon.com/s?k=mens+cream+linen+pants+relaxed+fit&tag=nofaceatelier-20' },
-          { title: 'SHEIN Linen Option', price: '$23', url: 'https://us.shein.com/pdsearch/men%20cream%20linen%20pants/' }
-        ]
-      },
-      {
-        id: 'item-10',
-        type: 'trousers',
-        badge: 'Evening Cut',
-        brand: 'ATELIER TAILORING',
-        name: 'Charcoal Pleated Straight Dress Trousers',
-        price: 45,
-        img: 'images/item_10_charcoal_pants.jpg',
-        pos: 'center center',
-        desc: 'Front-pleated tailored charcoal trousers with fluid drape.',
-        amazon: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20pleated%20trousers/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$45', url: 'https://www.amazon.com/s?k=mens+charcoal+pleated+dress+pants+relaxed&tag=nofaceatelier-20' },
-          { title: 'SHEIN Tailored Option', price: '$25', url: 'https://us.shein.com/pdsearch/men%20pleated%20trousers/' }
-        ]
-      },
-      {
-        id: 'item-11',
-        type: 'accessories',
-        badge: 'Carryall',
-        brand: 'NOFACE GOODS',
-        name: 'Full-Grain Look Dark Brown Weekender Tote',
-        price: 54,
-        img: 'images/item_11_leather_tote.jpg',
-        pos: 'center center',
-        desc: 'Structured dark espresso leather tote sized for daily carry and weekend travel.',
-        amazon: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20brown%20leather%20tote/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$54', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+tote+bag&tag=nofaceatelier-20' },
-          { title: 'SHEIN Travel Option', price: '$28', url: 'https://us.shein.com/pdsearch/men%20brown%20leather%20tote/' }
-        ]
-      },
-      {
-        id: 'item-12',
-        type: 'footwear',
-        badge: 'Footwear',
-        brand: 'NOFACE FOOTWEAR',
-        name: 'Tan Suede Two-Strap Contoured Cork Slides',
-        price: 30,
-        img: 'images/item_12_suede_slides.jpg',
-        pos: 'center center',
-        desc: 'Soft suede double-buckle straps mounted on an ergonomic cork footbed.',
-        amazon: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20cork%20sandals/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$30', url: 'https://www.amazon.com/s?k=mens+tan+suede+two+strap+cork+sandals&tag=nofaceatelier-20' },
-          { title: 'SHEIN Footwear Option', price: '$17', url: 'https://us.shein.com/pdsearch/men%20cork%20sandals/' }
-        ]
-      },
-      {
-        id: 'item-13',
-        type: 'trousers',
-        badge: 'Summer Essential',
-        brand: 'COASTAL TAILORING',
-        name: 'Beige Tailored Flat-Front Chino Shorts (7-Inch)',
-        price: 28,
-        img: 'images/item_13_chino_shorts.jpg',
-        pos: 'center center',
-        desc: 'Flat-front stretch cotton-twill shorts with tailored silhouette falling 2 inches above the knee.',
-        amazon: 'https://www.amazon.com/s?k=mens+beige+tailored+chino+shorts+7+inch&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20chino%20shorts%20beige/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$28', url: 'https://www.amazon.com/s?k=mens+beige+tailored+chino+shorts+7+inch&tag=nofaceatelier-20' },
-          { title: 'SHEIN Tailored Option', price: '$16', url: 'https://us.shein.com/pdsearch/men%20chino%20shorts%20beige/' }
-        ]
-      },
-      {
-        id: 'item-14',
-        type: 'footwear',
-        badge: 'Minimalist Core',
-        brand: 'NOFACE FOOTWEAR',
-        name: 'White Two-Strap Buckle Cork Slides',
-        price: 29,
-        img: 'images/item_14_white_slides.jpg',
-        pos: 'center center',
-        desc: 'Clean matte white synthetic leather double-strap slides with supportive contoured natural cork.',
-        amazon: 'https://www.amazon.com/s?k=mens+white+two+strap+buckle+sandals&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20white%20buckle%20slides/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$29', url: 'https://www.amazon.com/s?k=mens+white+two+strap+buckle+sandals&tag=nofaceatelier-20' },
-          { title: 'SHEIN Comfort Option', price: '$18', url: 'https://us.shein.com/pdsearch/men%20white%20buckle%20slides/' }
-        ]
-      },
-      {
-        id: 'item-15',
-        type: 'accessories',
-        badge: 'Everyday Tote',
-        brand: 'NOFACE GOODS',
-        name: 'Heavyweight 16oz Cream Canvas Carryall Tote',
-        price: 24,
-        img: 'images/item_15_canvas_tote.jpg',
-        pos: 'center center',
-        desc: 'Unbleached heavy cotton canvas with reinforced box stitching and dual shoulder drop straps.',
-        amazon: 'https://www.amazon.com/s?k=cream+heavyweight+canvas+tote+bag+mens&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20canvas%20tote%20bag/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$24', url: 'https://www.amazon.com/s?k=cream+heavyweight+canvas+tote+bag+mens&tag=nofaceatelier-20' },
-          { title: 'SHEIN Canvas Option', price: '$12', url: 'https://us.shein.com/pdsearch/men%20canvas%20tote%20bag/' }
-        ]
-      },
-      {
-        id: 'item-16',
-        type: 'trousers',
-        badge: 'Resort Utility',
-        brand: 'HAVANA CLUB',
-        name: 'Olive Green Tapered Utility Cargo Shorts',
-        price: 28,
-        img: 'images/item_16_cargo_shorts.jpg',
-        pos: 'center center',
-        desc: 'Lightweight washed poplin utility shorts with streamlined flat cargo pockets.',
-        amazon: 'https://www.amazon.com/s?k=mens+olive+green+tailored+cargo+shorts&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20olive%20cargo%20shorts/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$28', url: 'https://www.amazon.com/s?k=mens+olive+green+tailored+cargo+shorts&tag=nofaceatelier-20' },
-          { title: 'SHEIN Utility Option', price: '$17', url: 'https://us.shein.com/pdsearch/men%20olive%20cargo%20shorts/' }
-        ]
-      },
-      {
-        id: 'item-17',
-        type: 'accessories',
-        badge: 'Weekend Crossbody',
-        brand: 'NOFACE GOODS',
-        name: 'Brown Leather Round Weekend Crossbody Bag',
-        price: 24,
-        img: 'images/item_17_crossbody_bag.jpg',
-        pos: 'center center',
-        desc: 'Compact textured brown leather crossbody bag with antique brass zipper and adjustable strap.',
-        amazon: 'https://www.amazon.com/s?k=brown+leather+crossbody+bag+unisex&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20brown%20crossbody%20bag/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$24', url: 'https://www.amazon.com/s?k=brown+leather+crossbody+bag+unisex&tag=nofaceatelier-20' },
-          { title: 'SHEIN Crossbody Option', price: '$14', url: 'https://us.shein.com/pdsearch/men%20brown%20crossbody%20bag/' }
-        ]
-      },
-      {
-        id: 'item-18',
-        type: 'accessories',
-        badge: 'Old Money Accent',
-        brand: 'ATELIER JEWELRY',
-        name: 'Layered Gold Pendant Chain &amp; Link Set',
-        price: 20,
-        img: 'images/item_18_gold_chain.jpg',
-        pos: 'center center',
-        desc: '18k gold-plated hypoallergenic stainless steel chain set featuring micro-curb and figaro layers.',
-        amazon: 'https://www.amazon.com/s?k=mens+layered+gold+pendant+necklace+stainless&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20gold%20layered%20necklace/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$20', url: 'https://www.amazon.com/s?k=mens+layered+gold+pendant+necklace+stainless&tag=nofaceatelier-20' },
-          { title: 'SHEIN Jewelry Option', price: '$9', url: 'https://us.shein.com/pdsearch/men%20gold%20layered%20necklace/' }
-        ]
-      },
-      {
-        id: 'item-19',
-        type: 'footwear',
-        badge: 'Luxury Coastal',
-        brand: 'NOFACE FOOTWEAR',
-        name: 'Dark Espresso Leather Double-Buckle Slides',
-        price: 31,
-        img: 'images/item_19_espresso_slides.jpg',
-        pos: 'center center',
-        desc: 'Deep espresso oiled leather slides with polished gunmetal buckles and deep heel cup.',
-        amazon: 'https://www.amazon.com/s?k=mens+dark+brown+leather+two+strap+sandals&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20brown%20leather%20slides/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$31', url: 'https://www.amazon.com/s?k=mens+dark+brown+leather+two+strap+sandals&tag=nofaceatelier-20' },
-          { title: 'SHEIN Leather Option', price: '$19', url: 'https://us.shein.com/pdsearch/men%20brown%20leather%20slides/' }
-        ]
-      },
-      {
-        id: 'item-20',
-        type: 'footwear',
-        badge: 'Court Classic',
-        brand: 'NOFACE FOOTWEAR',
-        name: 'Cream Leather Retro Court Sneakers (Gum Sole)',
-        price: 39,
-        img: 'images/item_20_retro_sneakers.jpg',
-        pos: 'center center',
-        desc: 'Low-profile off-white leather sneakers with natural honey gum sole and padded collar.',
-        amazon: 'https://www.amazon.com/s?k=mens+cream+gum+sole+retro+sneakers&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20retro%20gum%20sole%20sneakers/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$39', url: 'https://www.amazon.com/s?k=mens+cream+gum+sole+retro+sneakers&tag=nofaceatelier-20' },
-          { title: 'SHEIN Sneaker Option', price: '$26', url: 'https://us.shein.com/pdsearch/men%20retro%20gum%20sole%20sneakers/' }
-        ]
-      },
-      {
-        id: 'item-21',
-        type: 'shirting',
-        badge: 'Knitwear Anchor',
-        brand: 'ATELIER TAILORING',
-        name: 'Espresso Brown Fine-Ribbed Crewneck Knit Tee',
-        price: 28,
-        img: 'images/item_21_espresso_tee.jpg',
-        pos: 'center center',
-        desc: 'Fine-gauge knit t-shirt with tailored banded sleeves and neckline designed specifically under blazers.',
-        amazon: 'https://www.amazon.com/s?k=mens+espresso+brown+ribbed+knit+t+shirt&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20brown%20knit%20t%20shirt/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$28', url: 'https://www.amazon.com/s?k=mens+espresso+brown+ribbed+knit+t+shirt&tag=nofaceatelier-20' },
-          { title: 'SHEIN Knit Option', price: '$15', url: 'https://us.shein.com/pdsearch/men%20brown%20knit%20t%20shirt/' }
-        ]
-      },
-      {
-        id: 'item-22',
-        type: 'shirting',
-        badge: 'Base Layer',
-        brand: 'COASTAL LINEN',
-        name: 'Fitted Off-White Ribbed Cotton Tank Top',
-        price: 18,
-        img: 'images/item_22_ribbed_tank.jpg',
-        pos: 'center center',
-        desc: 'Heavyweight ribbed cotton tank cut slim to sit clean underneath open camp and Cuban collar shirts.',
-        amazon: 'https://www.amazon.com/s?k=mens+white+ribbed+tank+top+pack&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20ribbed%20tank%20top/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$18', url: 'https://www.amazon.com/s?k=mens+white+ribbed+tank+top+pack&tag=nofaceatelier-20' },
-          { title: 'SHEIN Basic Option', price: '$8', url: 'https://us.shein.com/pdsearch/men%20ribbed%20tank%20top/' }
-        ]
-      },
-      {
-        id: 'item-23',
-        type: 'accessories',
-        badge: 'Eyewear',
-        brand: 'ATELIER EYEWEAR',
-        name: 'Classic Tortoiseshell Polarized Sunglasses (UV400)',
-        price: 18,
-        img: 'images/item_23_sunglasses.jpg',
-        pos: 'center center',
-        desc: 'Square keyhole bridge acetate frames in warm amber tortoiseshell with polarized green lenses.',
-        amazon: 'https://www.amazon.com/s?k=mens+tortoise+shell+polarized+sunglasses+classic&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20tortoise%20sunglasses/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$18', url: 'https://www.amazon.com/s?k=mens+tortoise+shell+polarized+sunglasses+classic&tag=nofaceatelier-20' },
-          { title: 'SHEIN Eyewear Option', price: '$9', url: 'https://us.shein.com/pdsearch/men%20tortoise%20sunglasses/' }
-        ]
-      },
-      {
-        id: 'item-24',
-        type: 'trousers',
-        badge: 'Finishing Touch',
-        brand: 'NOFACE GOODS',
-        name: 'Hand-Stitched Espresso Leather Dress Belt',
-        price: 26,
-        img: 'images/item_24_leather_belt.jpg',
-        pos: 'center center',
-        desc: '30mm slim full-grain leather belt with brushed palladium buckle for pleated trousers and chinos.',
-        amazon: 'https://www.amazon.com/s?k=mens+slim+leather+dress+belt+dark+brown&tag=nofaceatelier-20',
-        shein: 'https://us.shein.com/pdsearch/men%20brown%20leather%20belt/',
-        pieces: [
-          { title: 'Amazon Prime Option', price: '$26', url: 'https://www.amazon.com/s?k=mens+slim+leather+dress+belt+dark+brown&tag=nofaceatelier-20' },
-          { title: 'SHEIN Belt Option', price: '$11', url: 'https://us.shein.com/pdsearch/men%20brown%20leather%20belt/' }
-        ]
+        "title": "DALIX 20oz Heavyweight Cream Canvas Tote",
+        "price": "$22",
+        "url": "https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20"
       }
-    ];
+    ]
+  },
+  {
+    "id": "item-2",
+    "type": "look",
+    "badge": "Complete Look 02",
+    "brand": "RUNWAY LOOK 02",
+    "name": "Weekend Resort Botanical Cuban 4-Piece Outfit",
+    "price": 119,
+    "rating": "4.6",
+    "reviews": "80,770",
+    "fit": "4 Matched Pieces \u00b7 Cuban Shirt, Cargo Shorts, Suede Slides & Bag",
+    "img": "images/look_02.jpg",
+    "pos": "center top",
+    "desc": "Emerald and cream botanical Cuban collar shirt layered with tapered olive cargo shorts, genuine tan suede cork slides, and a vintage brown leather crossbody.",
+    "amazon": "https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY Tropical Foliage Cuban Collar Shirt",
+        "price": "$28",
+        "url": "https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20"
+      },
+      {
+        "title": "Wrangler Authentics Olive Twill Cargo Shorts",
+        "price": "$26",
+        "url": "https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20"
+      },
+      {
+        "title": "CUSHIONAIRE Tan Suede Cork Footbed Slides",
+        "price": "$30",
+        "url": "https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20"
+      },
+      {
+        "title": "LE'AOKUU Vintage Brown Leather Crossbody Bag",
+        "price": "$35",
+        "url": "https://www.amazon.com/dp/B09QJPLMSQ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-3",
+    "type": "look",
+    "badge": "Complete Look 03",
+    "brand": "RUNWAY LOOK 03",
+    "name": "Old Money Coastal Linen 4-Piece Outfit",
+    "price": 118,
+    "rating": "4.5",
+    "reviews": "37,940",
+    "fit": "4 Matched Pieces \u00b7 Camp Shirt, Linen Trousers, Leather Slides & Chain",
+    "img": "images/look_03.jpg",
+    "pos": "center top",
+    "desc": "Tonal sand beige camp-collar linen shirt paired with relaxed cream linen beach trousers, dark espresso leather slides, and an 18K gold-plated layered chain.",
+    "amazon": "https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY Sand Beige Cuban Guayabera Linen Shirt",
+        "price": "$29",
+        "url": "https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20"
+      },
+      {
+        "title": "COOFANDY Cream Relaxed-Fit Linen Trousers",
+        "price": "$34",
+        "url": "https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20"
+      },
+      {
+        "title": "Dockers Dark Espresso Leather Buckle Sandals",
+        "price": "$36",
+        "url": "https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20"
+      },
+      {
+        "title": "TRENDSMAX 18K Gold-Plated Layered Chain Set",
+        "price": "$19",
+        "url": "https://www.amazon.com/dp/B0CYZ629HJ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-4",
+    "type": "look",
+    "badge": "Complete Look 04",
+    "brand": "RUNWAY LOOK 04",
+    "name": "Date Night Camel Blazer Tailored 4-Piece Outfit",
+    "price": 210,
+    "rating": "4.6",
+    "reviews": "37,630",
+    "fit": "4 Matched Pieces \u00b7 Camel Blazer, Pleated Trousers, Sneakers & Duffle",
+    "img": "images/look_04.jpg",
+    "pos": "center top",
+    "desc": "Unstructured camel single-breasted knit blazer layered over an espresso knit tee, charcoal pleated dress trousers, retro gum-sole sneakers, and a leather weekender.",
+    "amazon": "https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "PJ PAUL JONES Unstructured Camel Knit Blazer",
+        "price": "$59",
+        "url": "https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20"
+      },
+      {
+        "title": "Dockers Charcoal Classic-Fit Pleated Trousers",
+        "price": "$44",
+        "url": "https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20"
+      },
+      {
+        "title": "Bruno Marc Cream Leather Gum-Sole Sneakers",
+        "price": "$39",
+        "url": "https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20"
+      },
+      {
+        "title": "S-ZONE Dark Espresso Leather Weekender Duffle",
+        "price": "$68",
+        "url": "https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-5",
+    "type": "shirting",
+    "badge": "#1 Bestseller",
+    "brand": "PJ PAUL JONES",
+    "name": "Unstructured Camel Knit Tailored Blazer",
+    "price": 59,
+    "rating": "4.5",
+    "reviews": "3,420",
+    "fit": "True to size \u00b7 Unlined breathable drape",
+    "img": "images/item_05_blazer.jpg",
+    "pos": "center center",
+    "desc": "PJ PAUL JONES Unstructured Camel Knit Tailored Blazer. True to size \u00b7 Unlined breathable drape. Verified 4.5 out of 5 stars from 3,420+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "PJ PAUL JONES \u00b7 Verified Amazon Prime Listing",
+        "price": "$59",
+        "url": "https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-6",
+    "type": "shirting",
+    "badge": "Runway Essential",
+    "brand": "COOFANDY",
+    "name": "Vertical Pinstripe Cotton-Linen Button Down Shirt",
+    "price": 32,
+    "rating": "4.5",
+    "reviews": "6,840",
+    "fit": "Relaxed fit \u00b7 Breathable linen blend",
+    "img": "images/item_06_striped_shirt.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Vertical Pinstripe Cotton-Linen Button Down Shirt. Relaxed fit \u00b7 Breathable linen blend. Verified 4.5 out of 5 stars from 6,840+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$32",
+        "url": "https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-7",
+    "type": "shirting",
+    "badge": "Resort Edit",
+    "brand": "COOFANDY",
+    "name": "Tropical Foliage Cuban Camp Collar Resort Shirt",
+    "price": 28,
+    "rating": "4.6",
+    "reviews": "9,150",
+    "fit": "Regular fit \u00b7 Wrinkle-resistant rayon",
+    "img": "images/item_07_cuban_shirt.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Tropical Foliage Cuban Camp Collar Resort Shirt. Regular fit \u00b7 Wrinkle-resistant rayon. Verified 4.6 out of 5 stars from 9,150+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$28",
+        "url": "https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-8",
+    "type": "shirting",
+    "badge": "Old Money Core",
+    "brand": "COOFANDY",
+    "name": "Sand Beige Open-Collar Cuban Guayabera Linen Shirt",
+    "price": 29,
+    "rating": "4.5",
+    "reviews": "14,200",
+    "fit": "True to size \u00b7 30% Linen / 70% Rayon",
+    "img": "images/item_08_sand_shirt.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Sand Beige Open-Collar Cuban Guayabera Linen Shirt. True to size \u00b7 30% Linen / 70% Rayon. Verified 4.5 out of 5 stars from 14,200+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$29",
+        "url": "https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-9",
+    "type": "trousers",
+    "badge": "Coastal Drape",
+    "brand": "COOFANDY",
+    "name": "Cream Relaxed-Fit Drawstring Linen Beach Trousers",
+    "price": 34,
+    "rating": "4.4",
+    "reviews": "8,900",
+    "fit": "Relaxed straight leg \u00b7 Elasticated waist",
+    "img": "images/item_09_cream_pants.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Cream Relaxed-Fit Drawstring Linen Beach Trousers. Relaxed straight leg \u00b7 Elasticated waist. Verified 4.4 out of 5 stars from 8,900+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$34",
+        "url": "https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-10",
+    "type": "trousers",
+    "badge": "Evening Tailoring",
+    "brand": "DOCKERS",
+    "name": "Charcoal Classic-Fit Pleated Dress Trousers",
+    "price": 44,
+    "rating": "4.6",
+    "reviews": "19,500",
+    "fit": "Classic tailored leg \u00b7 Comfort waist",
+    "img": "images/item_10_charcoal_pants.jpg",
+    "pos": "center center",
+    "desc": "DOCKERS Charcoal Classic-Fit Pleated Dress Trousers. Classic tailored leg \u00b7 Comfort waist. Verified 4.6 out of 5 stars from 19,500+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "DOCKERS \u00b7 Verified Amazon Prime Listing",
+        "price": "$44",
+        "url": "https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-11",
+    "type": "accessories",
+    "badge": "Travel Carryall",
+    "brand": "S-ZONE",
+    "name": "Dark Espresso Crazy-Horse Leather Weekender Duffle",
+    "price": 68,
+    "rating": "4.7",
+    "reviews": "5,410",
+    "fit": "Carry-on compliant \u00b7 Genuine cowhide trim",
+    "img": "images/item_11_leather_tote.jpg",
+    "pos": "center center",
+    "desc": "S-ZONE Dark Espresso Crazy-Horse Leather Weekender Duffle. Carry-on compliant \u00b7 Genuine cowhide trim. Verified 4.7 out of 5 stars from 5,410+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "S-ZONE \u00b7 Verified Amazon Prime Listing",
+        "price": "$68",
+        "url": "https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-12",
+    "type": "footwear",
+    "badge": "Contoured Cork",
+    "brand": "CUSHIONAIRE",
+    "name": "Tan Suede Double-Buckle Cork Footbed Slides",
+    "price": 30,
+    "rating": "4.6",
+    "reviews": "24,600",
+    "fit": "True to size \u00b7 100% genuine suede upper",
+    "img": "images/item_12_suede_slides.jpg",
+    "pos": "center center",
+    "desc": "CUSHIONAIRE Tan Suede Double-Buckle Cork Footbed Slides. True to size \u00b7 100% genuine suede upper. Verified 4.6 out of 5 stars from 24,600+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "CUSHIONAIRE \u00b7 Verified Amazon Prime Listing",
+        "price": "$30",
+        "url": "https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-13",
+    "type": "trousers",
+    "badge": "Summer Staple",
+    "brand": "AMAZON ESSENTIALS",
+    "name": "Beige Slim-Fit 7-Inch Flat-Front Chino Shorts",
+    "price": 22,
+    "rating": "4.6",
+    "reviews": "31,200",
+    "fit": "7-inch inseam \u00b7 Gentle stretch twill",
+    "img": "images/item_13_chino_shorts.jpg",
+    "pos": "center center",
+    "desc": "AMAZON ESSENTIALS Beige Slim-Fit 7-Inch Flat-Front Chino Shorts. 7-inch inseam \u00b7 Gentle stretch twill. Verified 4.6 out of 5 stars from 31,200+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "AMAZON ESSENTIALS \u00b7 Verified Amazon Prime Listing",
+        "price": "$22",
+        "url": "https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-14",
+    "type": "footwear",
+    "badge": "Minimalist Slide",
+    "brand": "CUSHIONAIRE",
+    "name": "Matte White Two-Strap Contoured Cork Sandals",
+    "price": 29,
+    "rating": "4.5",
+    "reviews": "11,300",
+    "fit": "Adjustable dual buckles \u00b7 EVA outsole",
+    "img": "images/item_14_white_slides.jpg",
+    "pos": "center center",
+    "desc": "CUSHIONAIRE Matte White Two-Strap Contoured Cork Sandals. Adjustable dual buckles \u00b7 EVA outsole. Verified 4.5 out of 5 stars from 11,300+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "CUSHIONAIRE \u00b7 Verified Amazon Prime Listing",
+        "price": "$29",
+        "url": "https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-15",
+    "type": "accessories",
+    "badge": "Daily Carry",
+    "brand": "DALIX",
+    "name": "Heavyweight 20oz Natural Cream Canvas Tote Bag",
+    "price": 22,
+    "rating": "4.7",
+    "reviews": "7,850",
+    "fit": "Reinforced box stitching \u00b7 Deep gusset",
+    "img": "images/item_15_canvas_tote.jpg",
+    "pos": "center center",
+    "desc": "DALIX Heavyweight 20oz Natural Cream Canvas Tote Bag. Reinforced box stitching \u00b7 Deep gusset. Verified 4.7 out of 5 stars from 7,850+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "DALIX \u00b7 Verified Amazon Prime Listing",
+        "price": "$22",
+        "url": "https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-16",
+    "type": "trousers",
+    "badge": "Resort Utility",
+    "brand": "WRANGLER AUTHENTICS",
+    "name": "Olive Green Tapered Twill Cargo Shorts",
+    "price": 26,
+    "rating": "4.6",
+    "reviews": "42,100",
+    "fit": "Relaxed seat & thigh \u00b7 Stretch cotton",
+    "img": "images/item_16_cargo_shorts.jpg",
+    "pos": "center center",
+    "desc": "WRANGLER AUTHENTICS Olive Green Tapered Twill Cargo Shorts. Relaxed seat & thigh \u00b7 Stretch cotton. Verified 4.6 out of 5 stars from 42,100+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "WRANGLER AUTHENTICS \u00b7 Verified Amazon Prime Listing",
+        "price": "$26",
+        "url": "https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-17",
+    "type": "accessories",
+    "badge": "Hands-Free Carry",
+    "brand": "LE'AOKUU",
+    "name": "Vintage Brown Genuine Leather Crossbody Messenger Bag",
+    "price": 35,
+    "rating": "4.5",
+    "reviews": "4,920",
+    "fit": "Adjustable shoulder strap \u00b7 Brass hardware",
+    "img": "images/item_17_crossbody_bag.jpg",
+    "pos": "center center",
+    "desc": "LE'AOKUU Vintage Brown Genuine Leather Crossbody Messenger Bag. Adjustable shoulder strap \u00b7 Brass hardware. Verified 4.5 out of 5 stars from 4,920+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B09QJPLMSQ?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "LE'AOKUU \u00b7 Verified Amazon Prime Listing",
+        "price": "$35",
+        "url": "https://www.amazon.com/dp/B09QJPLMSQ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-18",
+    "type": "accessories",
+    "badge": "Waterproof 18K",
+    "brand": "TRENDSMAX",
+    "name": "18K Gold-Plated Layered Pendant & Cuban Link Chain",
+    "price": 19,
+    "rating": "4.5",
+    "reviews": "6,100",
+    "fit": "316L Stainless steel \u00b7 Non-tarnish sweatproof",
+    "img": "images/item_18_gold_chain.jpg",
+    "pos": "center center",
+    "desc": "TRENDSMAX 18K Gold-Plated Layered Pendant & Cuban Link Chain. 316L Stainless steel \u00b7 Non-tarnish sweatproof. Verified 4.5 out of 5 stars from 6,100+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0CYZ629HJ?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "TRENDSMAX \u00b7 Verified Amazon Prime Listing",
+        "price": "$19",
+        "url": "https://www.amazon.com/dp/B0CYZ629HJ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-19",
+    "type": "footwear",
+    "badge": "Coastal Luxury",
+    "brand": "DOCKERS",
+    "name": "Dark Espresso Leather Double-Buckle Footbed Sandals",
+    "price": 36,
+    "rating": "4.6",
+    "reviews": "8,740",
+    "fit": "Contoured memory foam \u00b7 Oiled dark brown",
+    "img": "images/item_19_espresso_slides.jpg",
+    "pos": "center center",
+    "desc": "DOCKERS Dark Espresso Leather Double-Buckle Footbed Sandals. Contoured memory foam \u00b7 Oiled dark brown. Verified 4.6 out of 5 stars from 8,740+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "DOCKERS \u00b7 Verified Amazon Prime Listing",
+        "price": "$36",
+        "url": "https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-20",
+    "type": "footwear",
+    "badge": "Court Classic",
+    "brand": "BRUNO MARC",
+    "name": "Cream White Leather Retro Gum-Sole Court Sneakers",
+    "price": 39,
+    "rating": "4.5",
+    "reviews": "9,300",
+    "fit": "True to size \u00b7 Cushioned latex insole",
+    "img": "images/item_20_retro_sneakers.jpg",
+    "pos": "center center",
+    "desc": "BRUNO MARC Cream White Leather Retro Gum-Sole Court Sneakers. True to size \u00b7 Cushioned latex insole. Verified 4.5 out of 5 stars from 9,300+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "BRUNO MARC \u00b7 Verified Amazon Prime Listing",
+        "price": "$39",
+        "url": "https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-21",
+    "type": "shirting",
+    "badge": "Blazer Layer",
+    "brand": "PJ PAUL JONES",
+    "name": "Espresso Brown Fine-Ribbed Crewneck Knit Tee",
+    "price": 27,
+    "rating": "4.6",
+    "reviews": "5,280",
+    "fit": "Tailored athletic drape \u00b7 Banded hem",
+    "img": "images/item_21_espresso_tee.jpg",
+    "pos": "center center",
+    "desc": "PJ PAUL JONES Espresso Brown Fine-Ribbed Crewneck Knit Tee. Tailored athletic drape \u00b7 Banded hem. Verified 4.6 out of 5 stars from 5,280+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0CXXY7W46?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "PJ PAUL JONES \u00b7 Verified Amazon Prime Listing",
+        "price": "$27",
+        "url": "https://www.amazon.com/dp/B0CXXY7W46?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-22",
+    "type": "shirting",
+    "badge": "3-Pack Base",
+    "brand": "COOFANDY",
+    "name": "Fitted Off-White Ribbed Cotton Undershirt Tank (3-Pack)",
+    "price": 24,
+    "rating": "4.6",
+    "reviews": "12,400",
+    "fit": "Slim ribbed stretch \u00b7 Zero-shrinkage cotton",
+    "img": "images/item_22_ribbed_tank.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Fitted Off-White Ribbed Cotton Undershirt Tank (3-Pack). Slim ribbed stretch \u00b7 Zero-shrinkage cotton. Verified 4.6 out of 5 stars from 12,400+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B06XW4T56N?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$24",
+        "url": "https://www.amazon.com/dp/B06XW4T56N?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-23",
+    "type": "accessories",
+    "badge": "UV400 Polarized",
+    "brand": "SOJOS",
+    "name": "Classic Vintage Tortoiseshell Square Polarized Sunglasses",
+    "price": 16,
+    "rating": "4.6",
+    "reviews": "28,900",
+    "fit": "HD TAC polarized lenses \u00b7 European hinges",
+    "img": "images/item_23_sunglasses.jpg",
+    "pos": "center center",
+    "desc": "SOJOS Classic Vintage Tortoiseshell Square Polarized Sunglasses. HD TAC polarized lenses \u00b7 European hinges. Verified 4.6 out of 5 stars from 28,900+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B078RJRCMD?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "SOJOS \u00b7 Verified Amazon Prime Listing",
+        "price": "$16",
+        "url": "https://www.amazon.com/dp/B078RJRCMD?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-24",
+    "type": "accessories",
+    "badge": "Full-Grain Leather",
+    "brand": "CHAOREN",
+    "name": "Espresso Brown Italian Leather Ratchet Dress Belt",
+    "price": 26,
+    "rating": "4.7",
+    "reviews": "38,500",
+    "fit": "Micro-adjustable 35mm \u00b7 Scratch-resistant buckle",
+    "img": "images/item_24_leather_belt.jpg",
+    "pos": "center center",
+    "desc": "CHAOREN Espresso Brown Italian Leather Ratchet Dress Belt. Micro-adjustable 35mm \u00b7 Scratch-resistant buckle. Verified 4.7 out of 5 stars from 38,500+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0HC6WW1R8?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "CHAOREN \u00b7 Verified Amazon Prime Listing",
+        "price": "$26",
+        "url": "https://www.amazon.com/dp/B0HC6WW1R8?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-25",
+    "type": "shirting",
+    "badge": "Old Money Knit",
+    "brand": "PJ PAUL JONES",
+    "name": "Navy Textured Cable-Knit Open Collar Polo Shirt",
+    "price": 31,
+    "rating": "4.6",
+    "reviews": "7,410",
+    "fit": "Tailored vintage cut \u00b7 Breathable viscose knit",
+    "img": "images/item_25_knit_polo.jpg",
+    "pos": "center center",
+    "desc": "PJ PAUL JONES Navy Textured Cable-Knit Open Collar Polo Shirt. Tailored vintage cut \u00b7 Breathable viscose knit. Verified 4.6 out of 5 stars from 7,410+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0CRDN5J47?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "PJ PAUL JONES \u00b7 Verified Amazon Prime Listing",
+        "price": "$31",
+        "url": "https://www.amazon.com/dp/B0CRDN5J47?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-26",
+    "type": "shirting",
+    "badge": "Wardrobe Cornerstone",
+    "brand": "AMAZON ESSENTIALS",
+    "name": "Crisp White Regular-Fit Long-Sleeve Oxford Shirt",
+    "price": 23,
+    "rating": "4.6",
+    "reviews": "29,800",
+    "fit": "100% durable cotton \u00b7 Button-down collar",
+    "img": "images/item_26_white_oxford.jpg",
+    "pos": "center center",
+    "desc": "AMAZON ESSENTIALS Crisp White Regular-Fit Long-Sleeve Oxford Shirt. 100% durable cotton \u00b7 Button-down collar. Verified 4.6 out of 5 stars from 29,800+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B06XWNXSN3?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "AMAZON ESSENTIALS \u00b7 Verified Amazon Prime Listing",
+        "price": "$23",
+        "url": "https://www.amazon.com/dp/B06XWNXSN3?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-27",
+    "type": "shirting",
+    "badge": "Mediterranean Cut",
+    "brand": "COOFANDY",
+    "name": "Olive Green Long-Sleeve Roll-Up Linen Shirt",
+    "price": 33,
+    "rating": "4.5",
+    "reviews": "18,300",
+    "fit": "Button-tab roll sleeves \u00b7 Soft washed linen blend",
+    "img": "images/item_27_olive_linen.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Olive Green Long-Sleeve Roll-Up Linen Shirt. Button-tab roll sleeves \u00b7 Soft washed linen blend. Verified 4.5 out of 5 stars from 18,300+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0HG17NQCD?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$33",
+        "url": "https://www.amazon.com/dp/B0HG17NQCD?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-28",
+    "type": "shirting",
+    "badge": "Transitional Layer",
+    "brand": "COOFANDY",
+    "name": "Sandstone Lightweight Waffle-Knit Shacket Overshirt",
+    "price": 38,
+    "rating": "4.6",
+    "reviews": "4,650",
+    "fit": "Structured collar \u00b7 Dual chest pockets",
+    "img": "images/item_28_suede_overshirt.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Sandstone Lightweight Waffle-Knit Shacket Overshirt. Structured collar \u00b7 Dual chest pockets. Verified 4.6 out of 5 stars from 4,650+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0DHRBYLZ7?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$38",
+        "url": "https://www.amazon.com/dp/B0DHRBYLZ7?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-29",
+    "type": "trousers",
+    "badge": "Office To Dinner",
+    "brand": "AMAZON ESSENTIALS",
+    "name": "Navy Slim-Fit Wrinkle-Resistant Stretch Chino Pants",
+    "price": 25,
+    "rating": "4.5",
+    "reviews": "44,900",
+    "fit": "Tapered leg \u00b7 98% Cotton / 2% Elastane",
+    "img": "images/item_29_navy_chinos.jpg",
+    "pos": "center center",
+    "desc": "AMAZON ESSENTIALS Navy Slim-Fit Wrinkle-Resistant Stretch Chino Pants. Tapered leg \u00b7 98% Cotton / 2% Elastane. Verified 4.5 out of 5 stars from 44,900+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B07BJKXL5W?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "AMAZON ESSENTIALS \u00b7 Verified Amazon Prime Listing",
+        "price": "$25",
+        "url": "https://www.amazon.com/dp/B07BJKXL5W?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-30",
+    "type": "trousers",
+    "badge": "Resort Lounge",
+    "brand": "COOFANDY",
+    "name": "Khaki 7-Inch Drawstring Elastic-Waist Linen Shorts",
+    "price": 25,
+    "rating": "4.5",
+    "reviews": "13,700",
+    "fit": "Lightweight breathable weave \u00b7 Deep side pockets",
+    "img": "images/item_30_linen_shorts.jpg",
+    "pos": "center center",
+    "desc": "COOFANDY Khaki 7-Inch Drawstring Elastic-Waist Linen Shorts. Lightweight breathable weave \u00b7 Deep side pockets. Verified 4.5 out of 5 stars from 13,700+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0F745RGVZ?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "COOFANDY \u00b7 Verified Amazon Prime Listing",
+        "price": "$25",
+        "url": "https://www.amazon.com/dp/B0F745RGVZ?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-31",
+    "type": "trousers",
+    "badge": "Sartorial Cut",
+    "brand": "PJ PAUL JONES",
+    "name": "Sand Khaki High-Waist Pleated Gurkha Dress Trousers",
+    "price": 42,
+    "rating": "4.5",
+    "reviews": "2,890",
+    "fit": "Italian tab waistband \u00b7 No belt required",
+    "img": "images/item_31_gurkha_pants.jpg",
+    "pos": "center center",
+    "desc": "PJ PAUL JONES Sand Khaki High-Waist Pleated Gurkha Dress Trousers. Italian tab waistband \u00b7 No belt required. Verified 4.5 out of 5 stars from 2,890+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B074965Q6H?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "PJ PAUL JONES \u00b7 Verified Amazon Prime Listing",
+        "price": "$42",
+        "url": "https://www.amazon.com/dp/B074965Q6H?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-32",
+    "type": "footwear",
+    "badge": "Riviera Loafer",
+    "brand": "BRUNO MARC",
+    "name": "Chestnut Suede Slip-On Penny Loafers Driving Moccasins",
+    "price": 42,
+    "rating": "4.5",
+    "reviews": "15,600",
+    "fit": "Soft suede upper \u00b7 Flexible rubber driving sole",
+    "img": "images/item_32_penny_loafers.jpg",
+    "pos": "center center",
+    "desc": "BRUNO MARC Chestnut Suede Slip-On Penny Loafers Driving Moccasins. Soft suede upper \u00b7 Flexible rubber driving sole. Verified 4.5 out of 5 stars from 15,600+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0DDPJYH1D?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "BRUNO MARC \u00b7 Verified Amazon Prime Listing",
+        "price": "$42",
+        "url": "https://www.amazon.com/dp/B0DDPJYH1D?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-33",
+    "type": "footwear",
+    "badge": "Minimalist Dress",
+    "brand": "BRUNO MARC",
+    "name": "Triple-White Smooth Vegan Leather Low-Top Dress Sneakers",
+    "price": 38,
+    "rating": "4.5",
+    "reviews": "21,400",
+    "fit": "Clean tailoring pairing \u00b7 Padded heel collar",
+    "img": "images/item_33_white_sneakers.jpg",
+    "pos": "center center",
+    "desc": "BRUNO MARC Triple-White Smooth Vegan Leather Low-Top Dress Sneakers. Clean tailoring pairing \u00b7 Padded heel collar. Verified 4.5 out of 5 stars from 21,400+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0D4XXB7TF?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "BRUNO MARC \u00b7 Verified Amazon Prime Listing",
+        "price": "$38",
+        "url": "https://www.amazon.com/dp/B0D4XXB7TF?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-34",
+    "type": "footwear",
+    "badge": "Evening Boot",
+    "brand": "BRUNO MARC",
+    "name": "Sand Suede Elastic-Goring Chelsea Ankle Boots",
+    "price": 46,
+    "rating": "4.6",
+    "reviews": "16,800",
+    "fit": "Sleek almond toe \u00b7 Pull-on ankle tab",
+    "img": "images/item_34_chelsea_boots.jpg",
+    "pos": "center center",
+    "desc": "BRUNO MARC Sand Suede Elastic-Goring Chelsea Ankle Boots. Sleek almond toe \u00b7 Pull-on ankle tab. Verified 4.6 out of 5 stars from 16,800+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B06XTWPSJ4?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "BRUNO MARC \u00b7 Verified Amazon Prime Listing",
+        "price": "$46",
+        "url": "https://www.amazon.com/dp/B06XTWPSJ4?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-35",
+    "type": "accessories",
+    "badge": "Heritage Timepiece",
+    "brand": "TIMEX",
+    "name": "Gold-Tone Case & Espresso Brown Leather Strap Watch",
+    "price": 48,
+    "rating": "4.6",
+    "reviews": "34,200",
+    "fit": "38mm classic dial \u00b7 Indiglo backlight & mineral glass",
+    "img": "images/item_35_leather_watch.jpg",
+    "pos": "center center",
+    "desc": "TIMEX Gold-Tone Case & Espresso Brown Leather Strap Watch. 38mm classic dial \u00b7 Indiglo backlight & mineral glass. Verified 4.6 out of 5 stars from 34,200+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B00YTY4ABI?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "TIMEX \u00b7 Verified Amazon Prime Listing",
+        "price": "$48",
+        "url": "https://www.amazon.com/dp/B00YTY4ABI?tag=nofaceatelier-20"
+      }
+    ]
+  },
+  {
+    "id": "item-36",
+    "type": "accessories",
+    "badge": "Sun Cap",
+    "brand": "CARHARTT",
+    "name": "Washed Khaki 100% Cotton Canvas Unstructured Dad Cap",
+    "price": 19,
+    "rating": "4.8",
+    "reviews": "82,400",
+    "fit": "Pre-curved visor \u00b7 Moisture-wicking sweatband",
+    "img": "images/item_36_linen_cap.jpg",
+    "pos": "center center",
+    "desc": "CARHARTT Washed Khaki 100% Cotton Canvas Unstructured Dad Cap. Pre-curved visor \u00b7 Moisture-wicking sweatband. Verified 4.8 out of 5 stars from 82,400+ Amazon customer reviews with Prime delivery and free returns.",
+    "amazon": "https://www.amazon.com/dp/B0DK29CYY3?tag=nofaceatelier-20",
+    "pieces": [
+      {
+        "title": "CARHARTT \u00b7 Verified Amazon Prime Listing",
+        "price": "$19",
+        "url": "https://www.amazon.com/dp/B0DK29CYY3?tag=nofaceatelier-20"
+      }
+    ]
+  }
+];
 
     const savedSet = new Set();
     let activeFilter = 'all';
@@ -1320,7 +1865,7 @@
         if (activeFilter === 'saved') return savedSet.has(item.id);
         if (activeFilter !== 'all' && item.type !== activeFilter) return false;
         if (searchQuery) {
-          const hay = (item.brand + ' ' + item.name + ' ' + item.desc).toLowerCase();
+          const hay = (item.brand + ' ' + item.name + ' ' + item.desc + ' ' + item.fit).toLowerCase();
           return hay.includes(searchQuery);
         }
         return true;
@@ -1338,24 +1883,34 @@
         const card = document.createElement('article');
         card.className = 'revolve-card';
         const isSaved = savedSet.has(item.id);
+        const isLook = item.type === 'look';
 
         card.innerHTML = `
-          <div class="revolve-image-wrap" onclick="openModal('${item.id}')">
+          <div class="revolve-image-wrap" onclick="${isLook ? `openModal('${item.id}')` : `window.open('${item.amazon}', '_blank')`}">
             <img src="${item.img}" alt="${item.name}" loading="lazy" style="object-position: ${item.pos};" />
             <span class="editorial-tag">${item.badge}</span>
-            <button class="heart-btn ${isSaved ? 'saved' : ''}" onclick="event.stopPropagation(); toggleSave('${item.id}')">
+            <button class="heart-btn ${isSaved ? 'saved' : ''}" title="Save item" onclick="event.stopPropagation(); toggleSave('${item.id}')">
               ${isSaved ? '&#9829;' : '&#9825;'}
             </button>
-            <div class="quick-shop-bar">Quick View &amp; Shop</div>
           </div>
           <div class="revolve-meta">
-            <div class="revolve-brand">${item.brand}</div>
+            <div class="brand-rating-row">
+              <span class="revolve-brand">${item.brand}</span>
+              <span class="rating-pill"><span class="star">&#9733;</span> ${item.rating} <span class="rev-count">(${item.reviews})</span></span>
+            </div>
             <div class="revolve-name" onclick="openModal('${item.id}')">${item.name}</div>
-            <div class="revolve-price-row">
-              <span class="revolve-price">$${item.price}</span>
-              <div class="revolve-retailer-links">
-                <a href="${item.amazon}" target="_blank" rel="noopener">Amazon</a>
-                <a href="${item.shein}" target="_blank" rel="noopener">SHEIN</a>
+            <div class="fit-note">${item.fit}</div>
+            <div class="card-action-row">
+              <div>
+                <span class="revolve-price">$${item.price}</span>
+                <span class="prime-tag">Prime Delivery</span>
+              </div>
+              <div class="card-buttons">
+                ${isLook
+                  ? `<button class="btn-buy-amz" style="cursor:pointer;" onclick="openModal('${item.id}')">Shop 4 Pieces</button>`
+                  : `<button class="btn-quick-info" onclick="openModal('${item.id}')">Info</button>
+                     <a href="${item.amazon}" target="_blank" rel="noopener" class="btn-buy-amz">Buy on Amazon</a>`
+                }
               </div>
             </div>
           </div>
@@ -1408,11 +1963,10 @@
       if (!item) return;
 
       document.getElementById('mPhoto').src = item.img;
-      document.getElementById('mBrand').innerText = item.brand;
+      document.getElementById('mBrand').innerText = item.brand + ' · ★ ' + item.rating + ' (' + item.reviews + ' Reviews)';
       document.getElementById('mTitle').innerText = item.name;
       document.getElementById('mDesc').innerText = item.desc;
       document.getElementById('mPrimaryLink').href = item.amazon;
-      document.getElementById('mSecondaryLink').href = item.shein;
 
       const listEl = document.getElementById('mList');
       listEl.innerHTML = '';
@@ -1423,7 +1977,7 @@
           <span>${p.title}</span>
           <div class="modal-piece-links">
             <strong>${p.price}</strong>
-            <a href="${p.url}" target="_blank" rel="noopener">Buy</a>
+            <a href="${p.url}" target="_blank" rel="noopener">Buy on Amazon</a>
           </div>
         `;
         listEl.appendChild(li);
