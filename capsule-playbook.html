@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 16-Piece Men's Capsule Wardrobe Playbook | NOFACE ATELIER</title>
+  <title>The NOFACE Lookbook Magazine &amp; 16-Piece Capsule Blueprint | Issue 01</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
-      --bg-cream: #faf9f6;
-      --text: #1a1a1a;
+      --bg-soft: #faf9f6;
+      --text: #111111;
       --text-muted: #666666;
-      --border: #e5e5e5;
+      --border: #e6e4e0;
       --accent: #111111;
+      --gold: #c89d54;
       --font-serif: 'Bodoni Moda', Georgia, serif;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
@@ -25,187 +26,623 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--text);
       font-family: var(--font-sans);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 80px;
+      padding-bottom: 90px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* STICKY MAGAZINE BAR */
+    .mag-sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .mag-brand-left {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .mag-logo {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .mag-issue {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .mag-section-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .mag-section-links a {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.15s;
+    }
+
+    .mag-section-links a:hover {
+      color: var(--text);
+    }
+
+    .mag-actions-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-mag-outline {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text);
+      padding: 8px 14px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn-mag-outline:hover {
+      border-color: var(--text);
+    }
+
+    .btn-mag-solid {
+      border: 1px solid var(--text);
+      background: var(--text);
+      color: #ffffff;
+      padding: 8px 16px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn-mag-solid:hover {
+      background: #333333;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 48px 32px;
+      padding: 0 32px;
     }
 
-    /* COVER HEADER */
-    .playbook-header {
+    /* MAGAZINE COVER HERO */
+    .mag-cover {
+      padding: 56px 0 48px;
       border-bottom: 2px solid var(--text);
-      padding-bottom: 32px;
-      margin-bottom: 48px;
+      margin-bottom: 64px;
     }
 
-    .brand-tag {
+    .cover-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--text);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      margin-bottom: 36px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .cover-title-block {
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto 40px;
+    }
+
+    .cover-kicker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .cover-headline {
+      font-family: var(--font-serif);
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+
+    .cover-deck {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .cover-runway-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .cover-strip-card {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      background: var(--bg-soft);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .cover-strip-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .cover-strip-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .cover-strip-label {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 8px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* SECTION HEADERS */
+    .mag-section {
+      margin-bottom: 88px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .section-num {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 12px;
       display: block;
+      margin-bottom: 6px;
     }
 
-    h1.title {
+    .section-title {
       font-family: var(--font-serif);
-      font-size: 42px;
-      font-weight: 500;
+      font-size: 36px;
+      font-weight: 400;
       line-height: 1.15;
-      margin-bottom: 16px;
     }
 
-    .subtitle {
-      font-size: 16px;
+    .section-sub {
+      font-size: 13px;
       color: var(--text-muted);
-      max-width: 680px;
-      line-height: 1.7;
+      max-width: 460px;
     }
 
-    .meta-bar {
-      margin-top: 24px;
-      display: flex;
-      gap: 24px;
-      font-size: 12px;
-      color: var(--text-muted);
+    /* EDITORIAL SPREADS */
+    .editorial-spread {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 44px;
+      padding-bottom: 64px;
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .editorial-spread:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .spread-photo-frame {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .spread-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .spread-photo-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(17, 17, 17, 0.9);
+      color: #ffffff;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
-    .meta-bar strong {
+    .stylist-notes-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 22px 24px;
+    }
+
+    .notes-kicker {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
       color: var(--text);
     }
 
-    /* ACTION BAR FOR WEB VIEW */
-    .print-bar {
-      background: var(--bg-cream);
-      border: 1px solid var(--border);
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
+    .notes-body {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
     }
 
-    .btn-print {
-      background: var(--text);
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
+    .notes-meta {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
       font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      border-radius: 4px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
-    .btn-print:hover {
-      opacity: 0.85;
+    .notes-meta strong {
+      color: var(--text);
     }
 
-    /* SECTION STYLING */
-    section {
-      margin-bottom: 56px;
-    }
-
-    h2.section-heading {
-      font-family: var(--font-serif);
-      font-size: 26px;
-      font-weight: 500;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
+    .spread-header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
     }
 
-    p.lead-p {
-      font-size: 14px;
+    .spread-kicker {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    /* 16 PIECES GRID */
-    .pieces-grid {
+    .spread-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .spread-sub {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .spread-grid-2x2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    .piece-card {
-      background: var(--bg-cream);
+    .mag-mini-card {
       border: 1px solid var(--border);
-      padding: 20px;
-      border-radius: 6px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
     }
 
-    .piece-num {
+    .mag-mini-img-wrap {
+      display: block;
+      aspect-ratio: 3 / 4;
+      background: #ffffff;
+      overflow: hidden;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    .mag-mini-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .mag-mini-card:hover .mag-mini-img-wrap img {
+      transform: scale(1.03);
+    }
+
+    .mag-mini-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .mag-mini-brand {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--text-muted);
       margin-bottom: 4px;
     }
 
-    .piece-name {
-      font-size: 15px;
+    .mag-mini-title {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .mag-mini-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #f2f2f2;
+    }
+
+    .mag-mini-price {
+      font-size: 14px;
       font-weight: 700;
+    }
+
+    .mag-mini-btn {
+      background: var(--text);
+      color: #ffffff;
+      padding: 7px 12px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .mag-mini-btn:hover {
+      background: #333333;
+    }
+
+    /* 16 FOUNDATION GARMENTS VISUAL GRID */
+    .f16-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .f16-card {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .f16-top-tag {
+      padding: 8px 12px;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .f16-img-box {
+      display: block;
+      aspect-ratio: 3 / 4;
+      background: #ffffff;
+      overflow: hidden;
+      border-bottom: 1px solid #f2f2f2;
+    }
+
+    .f16-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .f16-card:hover .f16-img-box img {
+      transform: scale(1.03);
+    }
+
+    .f16-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .f16-brand {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .f16-name {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
       margin-bottom: 6px;
     }
 
-    .piece-material {
-      font-size: 12px;
+    .f16-fit {
+      font-size: 11px;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .piece-role {
-      font-size: 12px;
-      border-top: 1px solid var(--border);
+    .f16-role {
+      font-size: 11px;
+      color: var(--text-muted);
       padding-top: 8px;
+      border-top: 1px dashed var(--border);
+      margin-bottom: 14px;
     }
 
-    .piece-role strong {
+    .f16-role strong {
       color: var(--text);
     }
 
-    /* 32 COMBINATIONS TABLE */
+    .f16-bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .f16-price {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .f16-buy {
+      background: var(--text);
+      color: #ffffff;
+      padding: 8px 14px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .f16-buy:hover {
+      background: #333333;
+    }
+
+    /* 32-OUTFIT MATRIX FILTER & TABLE */
+    .matrix-filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .matrix-tab {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-muted);
+      padding: 9px 18px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .matrix-tab.active,
+    .matrix-tab:hover {
+      background: var(--text);
+      color: #ffffff;
+      border-color: var(--text);
+    }
+
     table.matrix-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
-      margin-top: 16px;
     }
 
     table.matrix-table th {
       background: var(--text);
       color: #ffffff;
       text-align: left;
-      padding: 12px 14px;
-      font-size: 11px;
+      padding: 13px 16px;
+      font-size: 10px;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
     table.matrix-table td {
-      padding: 12px 14px;
+      padding: 13px 16px;
       border-bottom: 1px solid var(--border);
       vertical-align: top;
     }
 
     table.matrix-table tr:nth-child(even) td {
-      background: var(--bg-cream);
+      background: var(--bg-soft);
     }
 
     .cat-badge {
@@ -213,572 +650,1090 @@
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 3px 8px;
-      background: #e5e5e5;
-      border-radius: 3px;
+      letter-spacing: 1px;
+      padding: 3px 9px;
+      background: #eae8e3;
     }
 
-    /* TAILORING CHEAT SHEET */
-    .tailor-box {
+    /* TAILOR & CARE GRID */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .rule-card {
+      background: var(--bg-soft);
       border: 1px solid var(--border);
-      background: var(--bg-cream);
       padding: 28px;
-      border-radius: 6px;
     }
 
-    .rule-item {
-      margin-bottom: 18px;
-      padding-bottom: 18px;
-      border-bottom: 1px dashed var(--border);
-    }
-
-    .rule-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .rule-item h4 {
-      font-size: 14px;
+    .rule-kicker {
+      font-size: 10px;
       font-weight: 700;
-      margin-bottom: 4px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
     }
 
-    .rule-item p {
+    .rule-card h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .rule-card p {
       font-size: 13px;
       color: var(--text-muted);
+      line-height: 1.65;
     }
 
-    /* PRINT STYLES */
-    @media print {
-      body {
-        padding: 0;
+    @media (max-width: 1024px) {
+      .editorial-spread {
+        grid-template-columns: 1fr;
       }
-      .container {
-        max-width: 100%;
-        padding: 20px;
-      }
-      .print-bar {
-        display: none;
-      }
-      .pieces-grid {
+      .f16-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      section {
-        page-break-inside: avoid;
+      .cover-runway-strip {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 640px) {
-      .pieces-grid {
+      .mag-sticky-nav {
+        padding: 12px 16px;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .cover-headline {
+        font-size: 36px;
+      }
+      .spread-grid-2x2,
+      .f16-grid,
+      .rules-grid {
         grid-template-columns: 1fr;
       }
-      h1.title {
-        font-size: 32px;
+    }
+
+    @media print {
+      .mag-sticky-nav,
+      .matrix-filter-bar {
+        display: none;
       }
-      .meta-bar {
-        flex-direction: column;
-        gap: 6px;
+      body {
+        padding-bottom: 0;
+      }
+      .editorial-spread {
+        page-break-inside: avoid;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-
-    <div class="print-bar">
-      <div>
-        <strong style="font-size: 13px;">Official Digital Release</strong>
-        <div style="font-size: 12px; color: var(--text-muted);">Save this page to your laptop or phone as a PDF anytime.</div>
-      </div>
-      <button class="btn-print" onclick="window.print()">Print or Save as PDF</button>
+  <!-- STICKY MAGAZINE BAR -->
+  <nav class="mag-sticky-nav">
+    <div class="mag-brand-left">
+      <a href="index.html" class="mag-logo">NOFACE</a>
+      <span class="mag-issue">Editorial Lookbook Magazine &middot; Issue 01</span>
     </div>
 
-    <header class="playbook-header">
-      <span class="brand-tag">NOFACE ATELIER &middot; OFFICIAL STYLE RESOURCE</span>
-      <h1 class="title">The 16-Piece Men's Capsule Wardrobe Playbook</h1>
-      <p class="subtitle">
-        A definitive master blueprint for the modern minimalist. 16 curated garments engineered to produce 32 distinct, high-rotation outfits for city, resort, business, and evening occasions.
-      </p>
-      <div class="meta-bar">
-        <div>Edition: <strong>2026/2027</strong></div>
-        <div>Total Pieces: <strong>16 Core</strong></div>
-        <div>Outfits Unlocked: <strong>32 Combinations</strong></div>
-        <div>Aesthetic: <strong>Quiet Luxury &middot; Modern Minimalist</strong></div>
+    <div class="mag-section-links">
+      <a href="#lookbookSpreads">01. 6 Lookbook Spreads</a>
+      <a href="#foundation16">02. 16 Foundation Pieces</a>
+      <a href="#matrix32">03. 32-Outfit Matrix</a>
+      <a href="#tailorRules">04. Tailor &amp; Care Rules</a>
+    </div>
+
+    <div class="mag-actions-right">
+      <a href="index.html" class="btn-mag-outline">&larr; Back to Storefront (48 Items)</a>
+      <button class="btn-mag-solid" onclick="window.print()">Save / Print Magazine PDF</button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- MAGAZINE COVER -->
+    <header class="mag-cover">
+      <div class="cover-top-meta">
+        <span>NOFACE ATELIER &middot; ARCHIVE EDITION</span>
+        <span>2026 / 2027 CAPSULE COLLECTION</span>
+        <span>6 RUNWAY SPREADS &middot; 16 CORE GARMENTS &middot; 32 OUTFITS</span>
+      </div>
+
+      <div class="cover-title-block">
+        <div class="cover-kicker">The Definitive Smart Casual Menswear Blueprint</div>
+        <h1 class="cover-headline">Effortless Linen, Italian Knitwear &amp; Modern Tailoring</h1>
+        <p class="cover-deck">
+          Every outfit in this magazine is engineered from interchangeable, top-rated Amazon garments that share a cohesive neutral color palette. Click any piece to shop directly with 1-click Prime delivery, or save this entire issue as a PDF reference.
+        </p>
+      </div>
+
+      <div class="cover-runway-strip">
+        <a href="#lookbookSpreads" class="cover-strip-card">
+          <img src="images/look_01.jpg" alt="Look 01 City Walk" />
+          <div class="cover-strip-label"><span>01. City Linen</span><span>$105</span></div>
+        </a>
+        <a href="#lookbookSpreads" class="cover-strip-card">
+          <img src="images/look_02.jpg" alt="Look 02 Weekend Resort" />
+          <div class="cover-strip-label"><span>02. Botanical Resort</span><span>$119</span></div>
+        </a>
+        <a href="#lookbookSpreads" class="cover-strip-card">
+          <img src="images/look_03.jpg" alt="Look 03 Coastal Old Money" />
+          <div class="cover-strip-label"><span>03. Coastal Old Money</span><span>$118</span></div>
+        </a>
+        <a href="#lookbookSpreads" class="cover-strip-card">
+          <img src="images/look_04.jpg" alt="Look 04 Date Night Tailoring" />
+          <div class="cover-strip-label"><span>04. Camel Tailoring</span><span>$210</span></div>
+        </a>
       </div>
     </header>
 
-    <!-- SECTION 1: CORE PIECES -->
-    <section>
-      <h2 class="section-heading">01. The 16 Foundation Garments</h2>
-      <p class="lead-p">
-        Every garment in this list is chosen for fabric neutrality, structural compatibility, and zero seasonal obsolescence.
-      </p>
-
-      <div class="pieces-grid">
-        <div class="piece-card">
-          <div class="piece-num">Piece 01 / Shirting</div>
-          <div class="piece-name">Off-White Pinstripe Linen Button-Down</div>
-          <div class="piece-material">Fabric: 100% French Flax or Cotton-Linen Blend</div>
-          <div class="piece-role">Role: <strong>Casual City &amp; Layering Hero</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($32) &rarr;</a></div>
+    <!-- SECTION 01: 6 EDITORIAL SPREADS -->
+    <section class="mag-section" id="lookbookSpreads">
+      <div class="section-banner">
+        <div>
+          <span class="section-num">Chapter 01 &middot; Visual Outfit Architecture</span>
+          <h2 class="section-title">The 6 Signature Lookbook Spreads</h2>
         </div>
+        <p class="section-sub">
+          Complete 4-piece outfits styled for city days, tropical resorts, coastal dinners, date nights, aperitivo hour, and smart travel.
+        </p>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 02 / Shirting</div>
-          <div class="piece-name">Sand Beige Camp-Collar Resort Shirt</div>
-          <div class="piece-material">Fabric: Washed Linen (Relaxed Open Collar)</div>
-          <div class="piece-role">Role: <strong>High Summer &amp; Coastal Warmth</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($29) &rarr;</a></div>
+      
+    <article class="editorial-spread ">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/look_01.jpg" alt="Effortless Pinstripe Linen & Tailored Chino Shorts" />
+          <div class="spread-photo-tag">LOOK 01 / CITY WALK</div>
         </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">Vertical pinstripes naturally elongate the upper frame while keeping airflow high. Pairing a relaxed long-sleeve linen shirt (cuffs rolled twice to the mid-forearm) with a structured 7-inch flat-front chino short balances casual comfort with sharp city tailoring.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Ivory White · Warm Khaki · Matte White · Unbleached Cream</div>
+            <div><strong>Best Worn For:</strong> Morning espresso runs, gallery afternoons, weekend city walking, and casual terrace lunches.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 03 / Shirting</div>
-          <div class="piece-name">Emerald Botanical Print Cuban Collar Shirt</div>
-          <div class="piece-material">Fabric: Viscose-Cotton or Silk-Cotton Blend</div>
-          <div class="piece-role">Role: <strong>Statement Weekend &amp; Party Accent</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($28) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 01 / CITY WALK</span>
+          <h3 class="spread-title">Effortless Pinstripe Linen & Tailored Chino Shorts</h3>
+          <div class="spread-sub">Daytime Architecture · 24°C to 32°C · Total Look: $105</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_06_striped_shirt.jpg" alt="Vertical Pinstripe Cotton-Linen Button Down Shirt" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">COOFANDY &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Vertical Pinstripe Cotton-Linen Button Down Shirt</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$32</span>
+              <a href="https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_13_chino_shorts.jpg" alt="Beige Slim-Fit 7-Inch Flat-Front Chino Shorts" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">AMAZON ESSENTIALS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Beige Slim-Fit 7-Inch Flat-Front Chino Shorts</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$22</span>
+              <a href="https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_14_white_slides.jpg" alt="Matte White Two-Strap Contoured Cork Sandals" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">CUSHIONAIRE &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Matte White Two-Strap Contoured Cork Sandals</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$29</span>
+              <a href="https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_15_canvas_tote.jpg" alt="Heavyweight 20oz Natural Cream Canvas Tote Bag" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">DALIX &middot; &#9733; 4.7</div>
+            <div class="mag-mini-title">Heavyweight 20oz Natural Cream Canvas Tote Bag</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$22</span>
+              <a href="https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    <article class="editorial-spread spread-reverse">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/look_02.jpg" alt="Botanical Cuban Camp Collar & Olive Utility" />
+          <div class="spread-photo-tag">LOOK 02 / WEEKEND RESORT</div>
+        </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">A statement print only looks expensive when every other garment in the outfit stays quiet and grounded. The deep emerald and cream botanical shirt is anchored by muted olive twill shorts, genuine oiled tan suede cork slides, and vintage brown leather.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Emerald Foliage · Olive Drab · Oiled Tan Suede · Vintage Espresso</div>
+            <div><strong>Best Worn For:</strong> Resort pool decks, beach club afternoons, botanical gardens, and warm weekend getaways.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 04 / Knitwear</div>
-          <div class="piece-name">Espresso Brown Ribbed Knit Tee</div>
-          <div class="piece-material">Fabric: 100% Pima Cotton or Fine-Gauge Knit</div>
-          <div class="piece-role">Role: <strong>Elevated Base Layer for Blazers</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0CXXY7W46?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($27) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 02 / WEEKEND RESORT</span>
+          <h3 class="spread-title">Botanical Cuban Camp Collar & Olive Utility</h3>
+          <div class="spread-sub">Tropical Texture · High Humidity · Total Look: $119</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_07_cuban_shirt.jpg" alt="Tropical Foliage Cuban Camp Collar Resort Shirt" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">COOFANDY &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Tropical Foliage Cuban Camp Collar Resort Shirt</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$28</span>
+              <a href="https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_16_cargo_shorts.jpg" alt="Olive Green Tapered Twill Cargo Shorts" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">WRANGLER AUTHENTICS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Olive Green Tapered Twill Cargo Shorts</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$26</span>
+              <a href="https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_12_suede_slides.jpg" alt="Tan Suede Double-Buckle Cork Footbed Slides" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">CUSHIONAIRE &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Tan Suede Double-Buckle Cork Footbed Slides</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$30</span>
+              <a href="https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B09QJPLMSQ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_17_crossbody_bag.jpg" alt="Vintage Brown Genuine Leather Crossbody Messenger Bag" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">LE'AOKUU &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Vintage Brown Genuine Leather Crossbody Messenger Bag</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$35</span>
+              <a href="https://www.amazon.com/dp/B09QJPLMSQ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    <article class="editorial-spread ">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/look_03.jpg" alt="Monochrome Sand Guayabera & Relaxed Linen Drape" />
+          <div class="spread-photo-tag">LOOK 03 / COASTAL OLD MONEY</div>
+        </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">Tonal dressing (combining warm sand beige with off-white cream) is the fastest shortcut to quiet luxury. Because both top and trousers share the same breathable linen texture, the dark espresso leather slides and subtle 18K gold chain provide crisp contrast.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Warm Sand · Off-White Flax · Dark Espresso · 18K Gold Tone</div>
+            <div><strong>Best Worn For:</strong> Sunset coastal dinners, yacht or boat days, summer garden parties, and vacation evenings.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 05 / Outerwear</div>
-          <div class="piece-name">Unstructured Camel Single-Breasted Blazer</div>
-          <div class="piece-material">Fabric: Lightweight Wool-Cotton Blend</div>
-          <div class="piece-role">Role: <strong>Smart Casual Anchor &amp; Date Night</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($59) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 03 / COASTAL OLD MONEY</span>
+          <h3 class="spread-title">Monochrome Sand Guayabera & Relaxed Linen Drape</h3>
+          <div class="spread-sub">Riviera Minimalist · Golden Hour · Total Look: $118</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_08_sand_shirt.jpg" alt="Sand Beige Open-Collar Cuban Guayabera Linen Shirt" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">COOFANDY &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Sand Beige Open-Collar Cuban Guayabera Linen Shirt</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$29</span>
+              <a href="https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_09_cream_pants.jpg" alt="Cream Relaxed-Fit Drawstring Linen Beach Trousers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">COOFANDY &middot; &#9733; 4.4</div>
+            <div class="mag-mini-title">Cream Relaxed-Fit Drawstring Linen Beach Trousers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$34</span>
+              <a href="https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_19_espresso_slides.jpg" alt="Dark Espresso Leather Double-Buckle Footbed Sandals" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">DOCKERS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Dark Espresso Leather Double-Buckle Footbed Sandals</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$36</span>
+              <a href="https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0CYZ629HJ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_18_gold_chain.jpg" alt="18K Gold-Plated Layered Pendant & Cuban Link Chain" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">TRENDSMAX &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">18K Gold-Plated Layered Pendant & Cuban Link Chain</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$19</span>
+              <a href="https://www.amazon.com/dp/B0CYZ629HJ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    <article class="editorial-spread spread-reverse">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/look_04.jpg" alt="Unstructured Camel Blazer & Charcoal Pleats" />
+          <div class="spread-photo-tag">LOOK 04 / EVENING TAILORING</div>
+        </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">Swapping a stiff dress shirt for a fine-ribbed espresso knit tee underneath an unlined camel blazer removes all stuffiness while keeping a commanding shoulder line. Charcoal pleated trousers and clean gum-sole court sneakers bridge formal and contemporary.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Camel Tan · Deep Espresso · Charcoal Grey · Natural Gum & Cream</div>
+            <div><strong>Best Worn For:</strong> Date nights, rooftop cocktail lounges, smart creative offices, and business travel.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 06 / Outerwear</div>
-          <div class="piece-name">Navy Water-Resistant Minimalist Overshirt</div>
-          <div class="piece-material">Fabric: Dense Cotton Twill with Matte Hardware</div>
-          <div class="piece-role">Role: <strong>Transit &amp; Weather Protection</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0DHRBYLZ7?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($38) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 04 / EVENING TAILORING</span>
+          <h3 class="spread-title">Unstructured Camel Blazer & Charcoal Pleats</h3>
+          <div class="spread-sub">Modern Sartorial · Date Night & Lounge · Total Look: $210</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_05_blazer.jpg" alt="Unstructured Camel Knit Tailored Blazer" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">PJ PAUL JONES &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Unstructured Camel Knit Tailored Blazer</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$59</span>
+              <a href="https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_10_charcoal_pants.jpg" alt="Charcoal Classic-Fit Pleated Dress Trousers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">DOCKERS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Charcoal Classic-Fit Pleated Dress Trousers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$44</span>
+              <a href="https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_20_retro_sneakers.jpg" alt="Cream White Leather Retro Gum-Sole Court Sneakers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">BRUNO MARC &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Cream White Leather Retro Gum-Sole Court Sneakers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$39</span>
+              <a href="https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_11_leather_tote.jpg" alt="Dark Espresso Crazy-Horse Leather Weekender Duffle" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">S-ZONE &middot; &#9733; 4.7</div>
+            <div class="mag-mini-title">Dark Espresso Crazy-Horse Leather Weekender Duffle</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$68</span>
+              <a href="https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    <article class="editorial-spread ">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/item_37_cream_waffle_polo.jpg" alt="Jacquard Knit Polo & Italian Gurkha Tailoring" />
+          <div class="spread-photo-tag">LOOK 05 / MEDITERRANEAN APERITIVO</div>
+        </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">Button-through jacquard knit polos frame the collarbones and chest far better than standard jersey polo shirts. Tucked into high-waisted sand Gurkha trousers (which require no belt thanks to the buckle tab waist) and finished with espresso dress loafers, the look is pure Italian Riviera.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Espresso Jacquard · Sand Khaki · Burnished Brown · Gold & Green G15</div>
+            <div><strong>Best Worn For:</strong> Aperitivo hour, upscale dinner reservations, engagement parties, and summer weddings.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 07 / Bottoms</div>
-          <div class="piece-name">Beige Tailored Flat-Front Chino Shorts (7")</div>
-          <div class="piece-material">Fabric: 98% Cotton / 2% Elastane Stretch Twill</div>
-          <div class="piece-role">Role: <strong>Warm Weather Daytime Walking</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($22) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 05 / MEDITERRANEAN APERITIVO</span>
+          <h3 class="spread-title">Jacquard Knit Polo & Italian Gurkha Tailoring</h3>
+          <div class="spread-sub">Sartorial Knitwear · Smart Evening · Total Look: $133</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0CRYP8326?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_37_cream_waffle_polo.jpg" alt="Espresso & Cream Jacquard Knit Button-Through Polo Shirt" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">COOFANDY &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Espresso & Cream Jacquard Knit Button-Through Polo Shirt</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$29</span>
+              <a href="https://www.amazon.com/dp/B0CRYP8326?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B074965Q6H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_31_gurkha_pants.jpg" alt="Sand Khaki High-Waist Pleated Gurkha Dress Trousers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">PJ PAUL JONES &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Sand Khaki High-Waist Pleated Gurkha Dress Trousers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$42</span>
+              <a href="https://www.amazon.com/dp/B074965Q6H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B01LZC7WC8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_44_horsebit_loafers.jpg" alt="Dark Espresso Leather Buckle-Strap Slip-On Dress Loafers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">BRUNO MARC &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Dark Espresso Leather Buckle-Strap Slip-On Dress Loafers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$44</span>
+              <a href="https://www.amazon.com/dp/B01LZC7WC8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B088FZ98TL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_48_aviator_sunglasses.jpg" alt="Retro Gold Metal Frame Green-Lens Polarized Sunglasses" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">SOJOS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Retro Gold Metal Frame Green-Lens Polarized Sunglasses</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$18</span>
+              <a href="https://www.amazon.com/dp/B088FZ98TL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    <article class="editorial-spread spread-reverse">
+      <div class="spread-visual-col">
+        <div class="spread-photo-frame">
+          <img src="images/item_38_safari_jacket.jpg" alt="Olive Linen Chore Jacket & Heritage Beeswax Leather" />
+          <div class="spread-photo-tag">LOOK 06 / EXECUTIVE SMART TRANSIT</div>
+        </div>
+        <div class="stylist-notes-box">
+          <div class="notes-kicker">Stylist's Architecture Notes</div>
+          <p class="notes-body">When temperatures dip indoors or on evening flights, an unlined olive safari chore jacket layered over slate navy 4-way stretch chinos gives you three-season versatility. Clarks beeswax leather chukka boots and a vintage gold Casio timepiece complete the rugged-refined balance.</p>
+          <div class="notes-meta">
+            <div><strong>Color Harmony:</strong> Olive Utility · Slate Navy · Beeswax Leather · Brushed Gold</div>
+            <div><strong>Best Worn For:</strong> International flights, autumn city days, client coffee meetings, and weekend road trips.</div>
+          </div>
+        </div>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 08 / Bottoms</div>
-          <div class="piece-name">Olive Green Tapered Utility Cargo Shorts</div>
-          <div class="piece-material">Fabric: Lightweight Washed Poplin</div>
-          <div class="piece-role">Role: <strong>Weekend Leisure &amp; Casual Texture</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($26) &rarr;</a></div>
+      <div class="spread-pieces-col">
+        <div class="spread-header">
+          <span class="spread-kicker">LOOK 06 / EXECUTIVE SMART TRANSIT</span>
+          <h3 class="spread-title">Olive Linen Chore Jacket & Heritage Beeswax Leather</h3>
+          <div class="spread-sub">Transitional Layering · City to Airport · Total Look: $193</div>
         </div>
+        <div class="spread-grid-2x2">
+          
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B07MJQSBBY?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_38_safari_jacket.jpg" alt="Olive Green Lightweight Linen-Blend Safari Chore Jacket" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">PJ PAUL JONES &middot; &#9733; 4.5</div>
+            <div class="mag-mini-title">Olive Green Lightweight Linen-Blend Safari Chore Jacket</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$49</span>
+              <a href="https://www.amazon.com/dp/B07MJQSBBY?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B0GKHGC53N?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_40_stone_chinos.jpg" alt="Slate Navy Slim-Fit Smart 360 Flex Chino Trousers" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">DOCKERS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Slate Navy Slim-Fit Smart 360 Flex Chino Trousers</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$38</span>
+              <a href="https://www.amazon.com/dp/B0GKHGC53N?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B08FVMNQH7?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_43_desert_boots.jpg" alt="Beeswax Leather Bushacre 3 Chukka Desert Boots" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">CLARKS &middot; &#9733; 4.6</div>
+            <div class="mag-mini-title">Beeswax Leather Bushacre 3 Chukka Desert Boots</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$64</span>
+              <a href="https://www.amazon.com/dp/B08FVMNQH7?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mag-mini-card">
+          <a href="https://www.amazon.com/dp/B01M09CT2Q?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-img-wrap">
+            <img src="images/item_46_gold_watch.jpg" alt="Vintage Gold-Tone Stainless Steel Digital Bracelet Watch" loading="lazy" />
+          </a>
+          <div class="mag-mini-body">
+            <div class="mag-mini-brand">CASIO &middot; &#9733; 4.7</div>
+            <div class="mag-mini-title">Vintage Gold-Tone Stainless Steel Digital Bracelet Watch</div>
+            <div class="mag-mini-footer">
+              <span class="mag-mini-price">$42</span>
+              <a href="https://www.amazon.com/dp/B01M09CT2Q?tag=nofaceatelier-20" target="_blank" rel="noopener" class="mag-mini-btn">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </article>
+    
+    </section>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 09 / Bottoms</div>
-          <div class="piece-name">Cream Relaxed-Fit Straight Linen Trousers</div>
-          <div class="piece-material">Fabric: Heavyweight Linen with Drawstring Waist</div>
-          <div class="piece-role">Role: <strong>Old Money Resort &amp; Alfresco Dinners</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($34) &rarr;</a></div>
+    <!-- SECTION 02: 16 FOUNDATION PIECES -->
+    <section class="mag-section" id="foundation16">
+      <div class="section-banner">
+        <div>
+          <span class="section-num">Chapter 02 &middot; The Interchangeable Core</span>
+          <h2 class="section-title">The 16 Foundation Capsule Garments</h2>
         </div>
+        <p class="section-sub">
+          Chosen for fabric neutrality, high customer ratings, and zero seasonal obsolescence. Every top pairs with every bottom.
+        </p>
+      </div>
 
-        <div class="piece-card">
-          <div class="piece-num">Piece 10 / Bottoms</div>
-          <div class="piece-name">Charcoal Single-Pleated Dress Trousers</div>
-          <div class="piece-material">Fabric: High-Twist Tropical Wool or Crepe</div>
-          <div class="piece-role">Role: <strong>Formal Evening &amp; Architectural Drape</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($44) &rarr;</a></div>
+      <div class="f16-grid">
+        
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 01 · Shirting</div>
+      <a href="https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_06_striped_shirt.jpg" alt="Vertical Pinstripe Cotton-Linen Button Down Shirt" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">COOFANDY &middot; &#9733; 4.5 (6,840)</div>
+        <h4 class="f16-name">Vertical Pinstripe Cotton-Linen Button Down Shirt</h4>
+        <div class="f16-fit">Relaxed fit · Breathable linen blend</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Casual City & Layering Hero</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$32</span>
+          <a href="https://www.amazon.com/dp/B0C2GQ51XZ?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 11 / Footwear</div>
-          <div class="piece-name">White Two-Strap Contoured Cork Slides</div>
-          <div class="piece-material">Construction: Cork Footbed with Leather Straps</div>
-          <div class="piece-role">Role: <strong>Daily Casual Summer Footwear</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($29) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 02 · Shirting</div>
+      <a href="https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_08_sand_shirt.jpg" alt="Sand Beige Open-Collar Cuban Guayabera Linen Shirt" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">COOFANDY &middot; &#9733; 4.5 (14,200)</div>
+        <h4 class="f16-name">Sand Beige Open-Collar Cuban Guayabera Linen Shirt</h4>
+        <div class="f16-fit">True to size · 30% Linen / 70% Rayon</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> High Summer & Coastal Warmth</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$29</span>
+          <a href="https://www.amazon.com/dp/B07CZNXPL8?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 12 / Footwear</div>
-          <div class="piece-name">Tan Suede Double-Buckle Sandals</div>
-          <div class="piece-material">Construction: Oiled Suede with Brass Hardware</div>
-          <div class="piece-role">Role: <strong>Tactile Resort &amp; Poolside Comfort</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($30) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 03 · Shirting</div>
+      <a href="https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_07_cuban_shirt.jpg" alt="Tropical Foliage Cuban Camp Collar Resort Shirt" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">COOFANDY &middot; &#9733; 4.6 (9,150)</div>
+        <h4 class="f16-name">Tropical Foliage Cuban Camp Collar Resort Shirt</h4>
+        <div class="f16-fit">Regular fit · Wrinkle-resistant rayon</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Statement Weekend & Resort Accent</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$28</span>
+          <a href="https://www.amazon.com/dp/B08G18T3YS?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 13 / Footwear</div>
-          <div class="piece-name">Dark Espresso Leather Buckle Slides</div>
-          <div class="piece-material">Construction: Smooth Calfskin Finish</div>
-          <div class="piece-role">Role: <strong>Polished Coastal Footwear</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($36) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 04 · Knitwear</div>
+      <a href="https://www.amazon.com/dp/B0CXXY7W46?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_21_espresso_tee.jpg" alt="Espresso Brown Fine-Ribbed Crewneck Knit Tee" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">PJ PAUL JONES &middot; &#9733; 4.6 (5,280)</div>
+        <h4 class="f16-name">Espresso Brown Fine-Ribbed Crewneck Knit Tee</h4>
+        <div class="f16-fit">Tailored athletic drape · Banded hem</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Elevated Base Layer for Blazers</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$27</span>
+          <a href="https://www.amazon.com/dp/B0CXXY7W46?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 14 / Footwear</div>
-          <div class="piece-name">Cream Leather Retro Court Sneakers (Gum Sole)</div>
-          <div class="piece-material">Construction: Full-Grain Leather with Natural Gum Rubber</div>
-          <div class="piece-role">Role: <strong>Smart Casual Walking &amp; Tailoring Balance</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($39) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 05 · Tailoring</div>
+      <a href="https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_05_blazer.jpg" alt="Unstructured Camel Knit Tailored Blazer" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">PJ PAUL JONES &middot; &#9733; 4.5 (3,420)</div>
+        <h4 class="f16-name">Unstructured Camel Knit Tailored Blazer</h4>
+        <div class="f16-fit">True to size · Unlined breathable drape</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Smart Casual Anchor & Date Night</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$59</span>
+          <a href="https://www.amazon.com/dp/B0918Z7BG9?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 15 / Accessories</div>
-          <div class="piece-name">Heavyweight 16oz Cream Canvas Carryall Tote</div>
-          <div class="piece-material">Construction: Unbleached Cotton Canvas</div>
-          <div class="piece-role">Role: <strong>Market, Beach &amp; Daily Laptop Carry</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($22) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 06 · Outerwear</div>
+      <a href="https://www.amazon.com/dp/B0DHRBYLZ7?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_28_suede_overshirt.jpg" alt="Sandstone Lightweight Waffle-Knit Shacket Overshirt" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">COOFANDY &middot; &#9733; 4.6 (4,650)</div>
+        <h4 class="f16-name">Sandstone Lightweight Waffle-Knit Shacket Overshirt</h4>
+        <div class="f16-fit">Structured collar · Dual chest pockets</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Transit & Transitional Layering</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$38</span>
+          <a href="https://www.amazon.com/dp/B0DHRBYLZ7?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Piece 16 / Accessories</div>
-          <div class="piece-name">Dark Brown Full-Grain Leather Weekender Tote</div>
-          <div class="piece-material">Construction: Full-Grain Leather with Structured Base</div>
-          <div class="piece-role">Role: <strong>Travel, Business &amp; Evening Elegance</strong></div>
-          <div style="margin-top:10px;"><a href="https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20" target="_blank" rel="noopener" style="display:inline-block;background:#111;color:#fff;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;text-decoration:none;">Shop on Amazon ($68) &rarr;</a></div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 07 · Bottoms</div>
+      <a href="https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_13_chino_shorts.jpg" alt="Beige Slim-Fit 7-Inch Flat-Front Chino Shorts" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">AMAZON ESSENTIALS &middot; &#9733; 4.6 (31,200)</div>
+        <h4 class="f16-name">Beige Slim-Fit 7-Inch Flat-Front Chino Shorts</h4>
+        <div class="f16-fit">7-inch inseam · Gentle stretch twill</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Warm Weather Daytime Walking</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$22</span>
+          <a href="https://www.amazon.com/dp/B07F2B45Z6?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
         </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 08 · Bottoms</div>
+      <a href="https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_16_cargo_shorts.jpg" alt="Olive Green Tapered Twill Cargo Shorts" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">WRANGLER AUTHENTICS &middot; &#9733; 4.6 (42,100)</div>
+        <h4 class="f16-name">Olive Green Tapered Twill Cargo Shorts</h4>
+        <div class="f16-fit">Relaxed seat & thigh · Stretch cotton</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Weekend Leisure & Utility Texture</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$26</span>
+          <a href="https://www.amazon.com/dp/B0G8J7R7R1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 09 · Bottoms</div>
+      <a href="https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_09_cream_pants.jpg" alt="Cream Relaxed-Fit Drawstring Linen Beach Trousers" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">COOFANDY &middot; &#9733; 4.4 (8,900)</div>
+        <h4 class="f16-name">Cream Relaxed-Fit Drawstring Linen Beach Trousers</h4>
+        <div class="f16-fit">Relaxed straight leg · Elasticated waist</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Old Money Resort & Alfresco Dinners</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$34</span>
+          <a href="https://www.amazon.com/dp/B09G86YWT1?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 10 · Bottoms</div>
+      <a href="https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_10_charcoal_pants.jpg" alt="Charcoal Classic-Fit Pleated Dress Trousers" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">DOCKERS &middot; &#9733; 4.6 (19,500)</div>
+        <h4 class="f16-name">Charcoal Classic-Fit Pleated Dress Trousers</h4>
+        <div class="f16-fit">Classic tailored leg · Comfort waist</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Formal Evening & Architectural Drape</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$44</span>
+          <a href="https://www.amazon.com/dp/B01BNSM1JA?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 11 · Footwear</div>
+      <a href="https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_14_white_slides.jpg" alt="Matte White Two-Strap Contoured Cork Sandals" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">CUSHIONAIRE &middot; &#9733; 4.5 (11,300)</div>
+        <h4 class="f16-name">Matte White Two-Strap Contoured Cork Sandals</h4>
+        <div class="f16-fit">Adjustable dual buckles · EVA outsole</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Daily Casual Summer Footwear</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$29</span>
+          <a href="https://www.amazon.com/dp/B0B7Q7VW5H?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 12 · Footwear</div>
+      <a href="https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_12_suede_slides.jpg" alt="Tan Suede Double-Buckle Cork Footbed Slides" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">CUSHIONAIRE &middot; &#9733; 4.6 (24,600)</div>
+        <h4 class="f16-name">Tan Suede Double-Buckle Cork Footbed Slides</h4>
+        <div class="f16-fit">True to size · 100% genuine suede upper</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Tactile Resort & Poolside Comfort</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$30</span>
+          <a href="https://www.amazon.com/dp/B0B7Q9TS6B?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 13 · Footwear</div>
+      <a href="https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_19_espresso_slides.jpg" alt="Dark Espresso Leather Double-Buckle Footbed Sandals" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">DOCKERS &middot; &#9733; 4.6 (8,740)</div>
+        <h4 class="f16-name">Dark Espresso Leather Double-Buckle Footbed Sandals</h4>
+        <div class="f16-fit">Contoured memory foam · Oiled dark brown</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Polished Coastal Leather Footwear</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$36</span>
+          <a href="https://www.amazon.com/dp/B07HRPFQ3G?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 14 · Footwear</div>
+      <a href="https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_20_retro_sneakers.jpg" alt="Cream White Leather Retro Gum-Sole Court Sneakers" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">BRUNO MARC &middot; &#9733; 4.5 (9,300)</div>
+        <h4 class="f16-name">Cream White Leather Retro Gum-Sole Court Sneakers</h4>
+        <div class="f16-fit">True to size · Cushioned latex insole</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Smart Casual Walking & Tailoring Balance</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$39</span>
+          <a href="https://www.amazon.com/dp/B0GMFY65KW?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 15 · Carry</div>
+      <a href="https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_15_canvas_tote.jpg" alt="Heavyweight 20oz Natural Cream Canvas Tote Bag" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">DALIX &middot; &#9733; 4.7 (7,850)</div>
+        <h4 class="f16-name">Heavyweight 20oz Natural Cream Canvas Tote Bag</h4>
+        <div class="f16-fit">Reinforced box stitching · Deep gusset</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Market, Beach & Daily Laptop Carry</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$22</span>
+          <a href="https://www.amazon.com/dp/B0135B6PYU?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="f16-card">
+      <div class="f16-top-tag">Piece 16 · Carry</div>
+      <a href="https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-img-box">
+        <img src="images/item_11_leather_tote.jpg" alt="Dark Espresso Crazy-Horse Leather Weekender Duffle" loading="lazy" />
+      </a>
+      <div class="f16-info">
+        <div class="f16-brand">S-ZONE &middot; &#9733; 4.7 (5,410)</div>
+        <h4 class="f16-name">Dark Espresso Crazy-Horse Leather Weekender Duffle</h4>
+        <div class="f16-fit">Carry-on compliant · Genuine cowhide trim</div>
+        <div class="f16-role"><strong>Capsule Role:</strong> Travel, Business & Weekend Elegance</div>
+        <div class="f16-bottom">
+          <span class="f16-price">$68</span>
+          <a href="https://www.amazon.com/dp/B0HN71MBDL?tag=nofaceatelier-20" target="_blank" rel="noopener" class="f16-buy">Buy on Amazon &rarr;</a>
+        </div>
+      </div>
+    </div>
+    
       </div>
     </section>
 
-    <!-- SECTION 2: 32 OUTFIT COMBINATION MATRIX -->
-    <section>
-      <h2 class="section-heading">02. The 32-Outfit Combination Matrix</h2>
-      <p class="lead-p">
-        How to pair the 16 pieces across 4 key lifestyle environments without repeating a look.
-      </p>
+    <!-- SECTION 03: 32 OUTFIT MATRIX -->
+    <section class="mag-section" id="matrix32">
+      <div class="section-banner">
+        <div>
+          <span class="section-num">Chapter 03 &middot; Daily Dressing System</span>
+          <h2 class="section-title">The 32-Outfit Combination Matrix</h2>
+        </div>
+        <p class="section-sub">
+          Filter by occasion below to see how the 16 foundation pieces combine into 32 non-repeating outfits.
+        </p>
+      </div>
 
-      <table class="matrix-table">
+      <div class="matrix-filter-bar">
+        <button class="matrix-tab active" onclick="filterMatrix('all', this)">All 32 Outfits</button>
+        <button class="matrix-tab" onclick="filterMatrix('City Day', this)">City Day (8)</button>
+        <button class="matrix-tab" onclick="filterMatrix('Weekend', this)">Weekend (8)</button>
+        <button class="matrix-tab" onclick="filterMatrix('Resort', this)">Resort &amp; Coastal (8)</button>
+        <button class="matrix-tab" onclick="filterMatrix('Evening', this)">Evening &amp; Date Night (8)</button>
+      </div>
+
+      <table class="matrix-table" id="outfitMatrixTable">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Category</th>
+            <th>Outfit #</th>
+            <th>Occasion</th>
             <th>Top / Layer</th>
-            <th>Bottom</th>
-            <th>Footwear &amp; Bag</th>
+            <th>Trousers / Shorts</th>
+            <th>Footwear &amp; Carry</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>01</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Pinstripe Linen Shirt (P01)</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>White Cork Slides (P11) + Canvas Tote (P15)</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Espresso Knit Tee (P04)</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Navy Overshirt (P06) over White Tank</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>Retro Court Sneakers (P14)</td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Pinstripe Linen Shirt (P01) unbuttoned</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>White Cork Slides (P11)</td>
-          </tr>
-          <tr>
-            <td>05</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Sand Camp Shirt (P02)</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>06</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Navy Overshirt (P06) buttoned</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td>
-          </tr>
-          <tr>
-            <td>07</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Espresso Knit Tee (P04)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>08</td>
-            <td><span class="cat-badge">City Day</span></td>
-            <td>Pinstripe Linen Shirt (P01)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>White Cork Slides (P11)</td>
-          </tr>
-          <tr>
-            <td>09</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Botanical Cuban Shirt (P03)</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Botanical Cuban Shirt (P03) open</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>White Cork Slides (P11) + Canvas Tote (P15)</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Sand Camp Shirt (P02)</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Botanical Cuban Shirt (P03)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Navy Overshirt (P06)</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Retro Court Sneakers (P14)</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Espresso Knit Tee (P04)</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Pinstripe Linen Shirt (P01) rolled sleeves</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td><span class="cat-badge">Weekend</span></td>
-            <td>Camel Blazer (P05) over White Tank</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>Retro Court Sneakers (P14)</td>
-          </tr>
-          <tr>
-            <td>17</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Sand Camp Shirt (P02)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13) + Canvas Tote (P15)</td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Pinstripe Linen Shirt (P01)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>19</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Botanical Cuban Shirt (P03)</td>
-            <td>Beige Chino Shorts (P07)</td>
-            <td>Tan Suede Slides (P12)</td>
-          </tr>
-          <tr>
-            <td>20</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Sand Camp Shirt (P02)</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>21</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Espresso Knit Tee (P04)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>White Cork Slides (P11)</td>
-          </tr>
-          <tr>
-            <td>22</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Camel Blazer (P05)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13) + Leather Tote (P16)</td>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Navy Overshirt (P06)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>24</td>
-            <td><span class="cat-badge">Resort</span></td>
-            <td>Pinstripe Linen Shirt (P01)</td>
-            <td>Olive Cargo Shorts (P08)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>25</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Camel Blazer (P05) + Espresso Tee (P04)</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
-          </tr>
-          <tr>
-            <td>26</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Camel Blazer (P05) + Sand Shirt (P02)</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>27</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Camel Blazer (P05) + Pinstripe Shirt (P01)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Retro Court Sneakers (P14)</td>
-          </tr>
-          <tr>
-            <td>28</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Navy Overshirt (P06) + Espresso Tee (P04)</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
-          </tr>
-          <tr>
-            <td>29</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Botanical Cuban Shirt (P03) tucked</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Pinstripe Linen Shirt (P01) buttoned</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Dark Espresso Slides (P13) + Leather Tote (P16)</td>
-          </tr>
-          <tr>
-            <td>31</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Camel Blazer (P05) + Botanical Shirt (P03)</td>
-            <td>Cream Linen Trousers (P09)</td>
-            <td>Dark Espresso Slides (P13)</td>
-          </tr>
-          <tr>
-            <td>32</td>
-            <td><span class="cat-badge">Evening</span></td>
-            <td>Espresso Knit Tee (P04)</td>
-            <td>Charcoal Pleated Pants (P10)</td>
-            <td>Retro Court Sneakers (P14) + Leather Tote (P16)</td>
-          </tr>
+          <tr data-cat="City Day"><td>01</td><td><span class="cat-badge">City Day</span></td><td>Pinstripe Linen Shirt (P01)</td><td>Beige Chino Shorts (P07)</td><td>White Cork Slides (P11) + Canvas Tote (P15)</td></tr>
+          <tr data-cat="City Day"><td>02</td><td><span class="cat-badge">City Day</span></td><td>Espresso Knit Tee (P04)</td><td>Beige Chino Shorts (P07)</td><td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td></tr>
+          <tr data-cat="City Day"><td>03</td><td><span class="cat-badge">City Day</span></td><td>Waffle Overshirt (P06) over White Tank</td><td>Beige Chino Shorts (P07)</td><td>Retro Court Sneakers (P14)</td></tr>
+          <tr data-cat="City Day"><td>04</td><td><span class="cat-badge">City Day</span></td><td>Pinstripe Linen Shirt (P01) unbuttoned</td><td>Olive Cargo Shorts (P08)</td><td>White Cork Slides (P11)</td></tr>
+          <tr data-cat="City Day"><td>05</td><td><span class="cat-badge">City Day</span></td><td>Sand Camp Shirt (P02)</td><td>Beige Chino Shorts (P07)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="City Day"><td>06</td><td><span class="cat-badge">City Day</span></td><td>Waffle Overshirt (P06) buttoned</td><td>Cream Linen Trousers (P09)</td><td>Retro Court Sneakers (P14) + Canvas Tote (P15)</td></tr>
+          <tr data-cat="City Day"><td>07</td><td><span class="cat-badge">City Day</span></td><td>Espresso Knit Tee (P04)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="City Day"><td>08</td><td><span class="cat-badge">City Day</span></td><td>Pinstripe Linen Shirt (P01)</td><td>Cream Linen Trousers (P09)</td><td>White Cork Slides (P11)</td></tr>
+          <tr data-cat="Weekend"><td>09</td><td><span class="cat-badge">Weekend</span></td><td>Botanical Cuban Shirt (P03)</td><td>Olive Cargo Shorts (P08)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="Weekend"><td>10</td><td><span class="cat-badge">Weekend</span></td><td>Botanical Cuban Shirt (P03) open</td><td>Beige Chino Shorts (P07)</td><td>White Cork Slides (P11) + Canvas Tote (P15)</td></tr>
+          <tr data-cat="Weekend"><td>11</td><td><span class="cat-badge">Weekend</span></td><td>Sand Camp Shirt (P02)</td><td>Olive Cargo Shorts (P08)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="Weekend"><td>12</td><td><span class="cat-badge">Weekend</span></td><td>Botanical Cuban Shirt (P03)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Weekend"><td>13</td><td><span class="cat-badge">Weekend</span></td><td>Waffle Overshirt (P06)</td><td>Olive Cargo Shorts (P08)</td><td>Retro Court Sneakers (P14)</td></tr>
+          <tr data-cat="Weekend"><td>14</td><td><span class="cat-badge">Weekend</span></td><td>Espresso Knit Tee (P04)</td><td>Olive Cargo Shorts (P08)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="Weekend"><td>15</td><td><span class="cat-badge">Weekend</span></td><td>Pinstripe Linen Shirt (P01) rolled sleeves</td><td>Olive Cargo Shorts (P08)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="Weekend"><td>16</td><td><span class="cat-badge">Weekend</span></td><td>Camel Blazer (P05) over White Tank</td><td>Beige Chino Shorts (P07)</td><td>Retro Court Sneakers (P14)</td></tr>
+          <tr data-cat="Resort"><td>17</td><td><span class="cat-badge">Resort</span></td><td>Sand Camp Shirt (P02)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13) + Canvas Tote (P15)</td></tr>
+          <tr data-cat="Resort"><td>18</td><td><span class="cat-badge">Resort</span></td><td>Pinstripe Linen Shirt (P01)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Resort"><td>19</td><td><span class="cat-badge">Resort</span></td><td>Botanical Cuban Shirt (P03)</td><td>Beige Chino Shorts (P07)</td><td>Tan Suede Slides (P12)</td></tr>
+          <tr data-cat="Resort"><td>20</td><td><span class="cat-badge">Resort</span></td><td>Sand Camp Shirt (P02)</td><td>Charcoal Pleated Pants (P10)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Resort"><td>21</td><td><span class="cat-badge">Resort</span></td><td>Espresso Knit Tee (P04)</td><td>Cream Linen Trousers (P09)</td><td>White Cork Slides (P11)</td></tr>
+          <tr data-cat="Resort"><td>22</td><td><span class="cat-badge">Resort</span></td><td>Camel Blazer (P05)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13) + Leather Duffle (P16)</td></tr>
+          <tr data-cat="Resort"><td>23</td><td><span class="cat-badge">Resort</span></td><td>Waffle Overshirt (P06)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Resort"><td>24</td><td><span class="cat-badge">Resort</span></td><td>Pinstripe Linen Shirt (P01)</td><td>Olive Cargo Shorts (P08)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Evening"><td>25</td><td><span class="cat-badge">Evening</span></td><td>Camel Blazer (P05) + Espresso Tee (P04)</td><td>Charcoal Pleated Pants (P10)</td><td>Retro Court Sneakers (P14) + Leather Duffle (P16)</td></tr>
+          <tr data-cat="Evening"><td>26</td><td><span class="cat-badge">Evening</span></td><td>Camel Blazer (P05) + Sand Shirt (P02)</td><td>Charcoal Pleated Pants (P10)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Evening"><td>27</td><td><span class="cat-badge">Evening</span></td><td>Camel Blazer (P05) + Pinstripe Shirt (P01)</td><td>Cream Linen Trousers (P09)</td><td>Retro Court Sneakers (P14)</td></tr>
+          <tr data-cat="Evening"><td>28</td><td><span class="cat-badge">Evening</span></td><td>Waffle Overshirt (P06) + Espresso Tee (P04)</td><td>Charcoal Pleated Pants (P10)</td><td>Retro Court Sneakers (P14) + Leather Duffle (P16)</td></tr>
+          <tr data-cat="Evening"><td>29</td><td><span class="cat-badge">Evening</span></td><td>Botanical Cuban Shirt (P03) tucked</td><td>Charcoal Pleated Pants (P10)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Evening"><td>30</td><td><span class="cat-badge">Evening</span></td><td>Pinstripe Linen Shirt (P01) buttoned</td><td>Charcoal Pleated Pants (P10)</td><td>Dark Espresso Slides (P13) + Leather Duffle (P16)</td></tr>
+          <tr data-cat="Evening"><td>31</td><td><span class="cat-badge">Evening</span></td><td>Camel Blazer (P05) + Botanical Shirt (P03)</td><td>Cream Linen Trousers (P09)</td><td>Dark Espresso Slides (P13)</td></tr>
+          <tr data-cat="Evening"><td>32</td><td><span class="cat-badge">Evening</span></td><td>Espresso Knit Tee (P04)</td><td>Charcoal Pleated Pants (P10)</td><td>Retro Court Sneakers (P14) + Leather Duffle (P16)</td></tr>
         </tbody>
       </table>
     </section>
 
-    <!-- SECTION 3: TAILOR'S CHEAT SHEET -->
-    <section>
-      <h2 class="section-heading">03. The Tailor's Alteration Rules</h2>
-      <p class="lead-p">
-        Fit separates quiet luxury from standard off-the-rack clothing. Hand these exact instructions to your tailor:
-      </p>
+    <!-- SECTION 04: TAILOR & FABRIC CARE -->
+    <section class="mag-section" id="tailorRules">
+      <div class="section-banner">
+        <div>
+          <span class="section-num">Chapter 04 &middot; Proportion &amp; Longevity</span>
+          <h2 class="section-title">The Tailor's Alteration &amp; Care Rules</h2>
+        </div>
+        <p class="section-sub">
+          Exact hem, sleeve, and rise specifications to make $35 Amazon garments drape like $400 boutique tailoring.
+        </p>
+      </div>
 
-      <div class="tailor-box">
-        <div class="rule-item">
-          <h4>1. Chino Shorts Hem Length (The 7-Inch Rule)</h4>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-kicker">Tailoring Rule 01</div>
+          <h4>Chino Shorts Hem Length (The 7-Inch Rule)</h4>
           <p>
-            The hem must sit precisely 1.5 to 2 inches above the top of your kneecap when standing straight. Never allow shorts to touch or cover the knee. The leg opening should taper slightly to mirror your thigh width with 1 inch of slack.
+            The hem must sit precisely 1.5 to 2 inches above the top of your kneecap when standing straight. Never allow shorts to cover the knee. The leg opening should taper slightly to mirror your thigh width with 1 inch of slack.
           </p>
         </div>
 
-        <div class="rule-item">
-          <h4>2. Linen Trouser Break (No-Break or Slight Kiss)</h4>
+        <div class="rule-card">
+          <div class="rule-kicker">Tailoring Rule 02</div>
+          <h4>Linen Trouser Break (Zero Break or Slight Kiss)</h4>
           <p>
-            Cream linen trousers look best with zero break: the hem should lightly touch the top of your shoe or slide without folding over. For linen's natural drape, request a 1.5-inch blind hem cuff for extra weight at the bottom.
+            Cream and navy linen trousers look sharpest with zero break: the hem should lightly kiss the top of your loafer or slide without bunching. Request a 1.5-inch blind hem cuff for extra weight and vertical drape at the ankle.
           </p>
         </div>
 
-        <div class="rule-item">
-          <h4>3. Unstructured Blazer Sleeve Length</h4>
+        <div class="rule-card">
+          <div class="rule-kicker">Tailoring Rule 03</div>
+          <h4>Unstructured Blazer Sleeve Exposure</h4>
           <p>
-            Blazer cuffs should end exactly at the wrist bone, exposing 1/4 to 1/2 inch of your shirt cuff. The jacket body must cover approximately 80% of your seat (not cropped, not overcoat length).
+            Blazer cuffs should end right at the wrist bone, exposing 1/4 to 1/2 inch of your linen or oxford shirt cuff. Unlined knit blazers should be steamed on a wide wooden hanger rather than pressed flat with an iron.
           </p>
         </div>
 
-        <div class="rule-item">
-          <h4>4. Pleated Trousers Rise &amp; Drape</h4>
+        <div class="rule-card">
+          <div class="rule-kicker">Tailoring Rule 04</div>
+          <h4>Linen, Suede &amp; Cork Care Protocol</h4>
           <p>
-            Pleated charcoal trousers must sit at your natural waist (just below the navel), not on the hips. This ensures the single pleat stays flat while standing and opens cleanly when seated.
+            Wash linen garments in cold water on a delicate cycle and hang dry (never tumble dry on high heat). Brush suede footwear with a dry crepe brush and condition full-grain leather bags and belts every 90 days with neutral beeswax balm.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: FABRIC CARE -->
-    <section>
-      <h2 class="section-heading">04. Fabric Care &amp; Longevity</h2>
-      <p class="lead-p">
-        Proper laundering ensures these 16 pieces look better over time rather than wearing out:
-      </p>
-
-      <div class="pieces-grid">
-        <div class="piece-card">
-          <div class="piece-num">Linen Care</div>
-          <div class="piece-name">Washing &amp; Ironing French Flax</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
-            Always wash linen in cold water on a delicate cycle. Never use high heat in a dryer (hang dry only). To achieve the signature casual drape, steam while slightly damp rather than pressing flat with a heavy iron.
-          </p>
-        </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Leather Care</div>
-          <div class="piece-name">Slides &amp; Tote Bag Conditioning</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
-            Apply a neutral beeswax or lanolin leather balm once every 3 months. Wipe with a dry microfiber cloth after rain exposure. Store totes stuffed with tissue to maintain structural silhouette.
-          </p>
-        </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Footwear Maintenance</div>
-          <div class="piece-name">Cork Footbed Sealing</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
-            Apply cork sealant to the exposed edges of your sandals once a year to prevent water penetration and cracking. Clean white sneaker leather with gentle foam and a soft horsehair brush.
-          </p>
-        </div>
-
-        <div class="piece-card">
-          <div class="piece-num">Tailoring Maintenance</div>
-          <div class="piece-name">Blazer Care (Dry Clean Sparingly)</div>
-          <p style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
-            Do not dry clean your unstructured blazer more than twice a year. Frequent chemical cleaning degrades wool fibers. Use a garment steamer between wears to release wrinkles and eliminate odors.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer style="border-top: 1px solid var(--border); padding-top: 32px; font-size: 12px; color: var(--text-muted); text-align: center;">
-      &copy; 2026 NOFACE ATELIER. All rights reserved. Curated for the modern minimalist.
+    <footer style="border-top: 1px solid var(--border); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--text-muted);">
+      <div>&copy; 2026 NOFACE ATELIER. Official Amazon Associates Curation (Store ID: nofaceatelier-20).</div>
+      <div><a href="index.html" style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px;">&larr; Return to Main 48-Item Storefront</a></div>
     </footer>
 
   </div>
 
+  <script>
+    function filterMatrix(cat, btn) {
+      document.querySelectorAll('.matrix-tab').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.querySelectorAll('#outfitMatrixTable tbody tr').forEach(row => {
+        if (cat === 'all' || row.getAttribute('data-cat') === cat) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
