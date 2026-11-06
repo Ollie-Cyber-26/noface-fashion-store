@@ -671,6 +671,119 @@
       color: var(--text-muted);
     }
 
+    .visually-hidden {
+      position: absolute;
+      clip-path: inset(50%);
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    .vip-form-box {
+      flex: 1;
+      min-width: 300px;
+      max-width: 460px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 22px 24px;
+    }
+
+    .vip-form-group {
+      margin-block-end: 12px;
+    }
+
+    .vip-form-group label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 6px;
+      padding: 6px 0;
+      margin-top: -6px;
+    }
+
+    .vip-input-row {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .vip-input-row input[type="email"] {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      padding: 0.7rem 0.85rem;
+      min-height: 48px;
+      border: 1px solid #bbbbbb;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .vip-input-row input[type="email"]:focus-visible {
+      outline: 2px solid #111111;
+      outline-offset: 1px;
+      border-color: #111111;
+    }
+
+    .vip-input-row input[type="email"]:invalid:user-invalid {
+      border-color: #b91c1c;
+    }
+
+    .vip-submit-btn {
+      background: #111111;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 0 20px;
+      min-height: 48px;
+      border: 1px solid #111111;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .vip-submit-btn:hover:not(:disabled) {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .vip-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .vip-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .vip-status {
+      font-size: 12px;
+      font-weight: 600;
+      color: #111111;
+      margin-top: 8px;
+      min-height: 18px;
+    }
+
+    @media (pointer: coarse) {
+      .vip-input-row input[type="email"],
+      .vip-submit-btn {
+        min-height: 52px;
+      }
+    }
+
     /* 8. QUICK VIEW MODAL */
     dialog#quickModal {
       margin: auto;
@@ -1149,6 +1262,19 @@
         width: 100%;
       }
 
+      .vip-form-box {
+        min-width: 100%;
+        padding: 16px 14px;
+      }
+
+      .vip-input-row {
+        flex-direction: column;
+      }
+
+      .vip-submit-btn {
+        width: 100%;
+      }
+
       dialog#quickModal {
         width: 94dvw;
         max-height: 88dvh;
@@ -1206,7 +1332,8 @@
   <header class="site-header">
     <div class="header-top">
       <div class="header-search">
-        <input type="text" placeholder="Search COOFANDY, blazer, linen, loafers..." oninput="searchCatalog(this.value)" />
+        <label for="catalogSearchInput" class="visually-hidden">Search menswear catalog</label>
+        <input id="catalogSearchInput" name="q" type="search" placeholder="Search COOFANDY, blazer, linen, loafers..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="searchCatalog(this.value)" />
       </div>
       <a href="#" class="brand-wordmark" onclick="showHome(); return false;" title="Back to Runway Intro">NOFACE</a>
       <div class="header-utils">
@@ -1307,18 +1434,47 @@
     <div class="product-grid" id="revolveGrid"></div>
   </main>
 
-  <!-- MINIMALIST EDITORIAL DIGITAL GUIDE STRIP -->
+  <!-- MINIMALIST EDITORIAL DIGITAL GUIDE & VIP DROP LIST STRIP -->
   <section class="playbook-editorial-strip" id="playbookSection">
     <div class="playbook-inner">
       <div class="playbook-copy">
-        <span>Issue 01 &middot; Editorial Lookbook Magazine &amp; Blueprint</span>
-        <h3>The NOFACE Menswear Lookbook Magazine (32 Outfits)</h3>
-        <p>
-          Explore 6 full-spread visual runway looks, the 16 foundation studio garments, the interactive 32-outfit occasion matrix, and exact tailor alteration rules.
+        <span>Issue 01 &middot; Free Lookbook Magazine &amp; Friday Drop Club</span>
+        <h3>Get the Printable 32-Outfit Blueprint &amp; Friday Menswear Drops</h3>
+        <p style="margin-bottom: 16px;">
+          Browse our 6 full-spread runway looks, 16 foundation studio garments, and 32-outfit matrix online, or enter your email to unlock the printable PDF edition and our curated Friday 3-Piece Amazon Drops.
         </p>
+        <a href="capsule-playbook.html" target="_blank" class="btn-outline">Read Free Lookbook Magazine Online &rarr;</a>
       </div>
-      <div>
-        <a href="capsule-playbook.html" target="_blank" class="btn-primary">Open Free Lookbook Magazine</a>
+      <div class="vip-form-box">
+        <form name="noface-vip-club" method="POST" action="/capsule-playbook.html" data-netlify="true" netlify-honeypot="bot-field" id="storeVipForm">
+          <input type="hidden" name="form-name" value="noface-vip-club" />
+          <input type="hidden" name="source" value="storefront-index" />
+          <div class="visually-hidden">
+            <label for="storeBotField">Do not fill this out if you are human</label>
+            <input id="storeBotField" name="bot-field" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="vip-form-group">
+            <label for="storeVipEmail">Email Address (Required)</label>
+            <div class="vip-input-row">
+              <input
+                type="email"
+                id="storeVipEmail"
+                name="email"
+                required
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                enterkeyhint="send"
+                placeholder="you@example.com"
+                aria-describedby="storeVipHint storeVipStatus"
+              />
+              <button type="submit" class="vip-submit-btn" id="storeVipBtn">Get Free PDF</button>
+            </div>
+            <span id="storeVipHint" class="vip-hint">Instant access to the 32-Outfit PDF + 1 curated menswear email every Friday.</span>
+            <div id="storeVipStatus" class="vip-status" aria-live="polite"></div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -1355,9 +1511,10 @@
         <p>Minimalist menswear curation. As an official Amazon Associate (Store ID: nofaceatelier-20), we earn from qualifying purchases at no additional cost to you. All product prices and ratings reflect verified Amazon listings.</p>
       </div>
       <div>
-        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Quick Links</div>
-        <p><a href="capsule-playbook.html" target="_blank">16-Piece Capsule Wardrobe Playbook</a></p>
+        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Quick Links &amp; Brand Contact</div>
+        <p><a href="capsule-playbook.html" target="_blank">Free 16-Piece Capsule Lookbook Magazine</a></p>
         <p style="margin-top: 4px;"><a href="videos/faceless-summer-lookbook-veo.mp4" download>Download Runway Video (MP4)</a></p>
+        <p style="margin-top: 8px;">Brand Partnerships &amp; Seeding: <a href="mailto:contact.nofaceatelier@gmail.com" style="color: var(--text); font-weight: 600; text-decoration: underline;">contact.nofaceatelier@gmail.com</a></p>
       </div>
     </div>
   </footer>
@@ -2663,6 +2820,55 @@
         dialog.addEventListener('pointerdown', (e) => { pressedOutside = outside(e, dialog); });
         dialog.addEventListener('pointerup', (e) => { if (pressedOutside && outside(e, dialog)) dialog.close(); });
       }
+    }
+
+    const storeVipForm = document.getElementById('storeVipForm');
+    const storeVipEmail = document.getElementById('storeVipEmail');
+    const storeVipBtn = document.getElementById('storeVipBtn');
+    const storeVipStatus = document.getElementById('storeVipStatus');
+
+    if (storeVipEmail) {
+      storeVipEmail.addEventListener('input', () => {
+        storeVipEmail.setCustomValidity('');
+        if (storeVipStatus) storeVipStatus.textContent = '';
+      });
+      storeVipEmail.addEventListener('blur', () => {
+        if (storeVipEmail.value && !storeVipEmail.checkValidity()) {
+          storeVipEmail.setCustomValidity('Please enter a valid email address (for example, name@domain.com).');
+          if (storeVipStatus) storeVipStatus.textContent = 'Please enter a valid email address.';
+        }
+      });
+    }
+
+    if (storeVipForm) {
+      storeVipForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!storeVipEmail.checkValidity()) {
+          storeVipEmail.reportValidity();
+          return;
+        }
+        storeVipBtn.disabled = true;
+        storeVipBtn.textContent = 'Unlocking...';
+        const formData = new FormData(storeVipForm);
+        try {
+          localStorage.setItem('noface_vip_email', storeVipEmail.value.trim());
+        } catch (_) {}
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          storeVipStatus.textContent = 'Unlocked! Opening your printable 32-Outfit Lookbook Magazine...';
+          storeVipBtn.textContent = 'Unlocked ✓';
+          window.open('capsule-playbook.html?print=1', '_blank');
+        })
+        .catch(() => {
+          storeVipStatus.textContent = 'Unlocked! Opening your printable 32-Outfit Lookbook Magazine...';
+          storeVipBtn.textContent = 'Unlocked ✓';
+          window.open('capsule-playbook.html?print=1', '_blank');
+        });
+      });
     }
 
     renderGrid();

@@ -791,6 +791,152 @@
       line-height: 1.65;
     }
 
+    .visually-hidden {
+      position: absolute;
+      clip-path: inset(50%);
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    /* VIP PDF & FRIDAY DROP SECTION */
+    .vip-pdf-section {
+      background: var(--bg-soft);
+      border: 1px solid var(--text);
+      padding: 40px 44px;
+      margin-bottom: 72px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 36px;
+      align-items: center;
+      scroll-margin-top: 90px;
+    }
+
+    .vip-pdf-copy .vip-kicker {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .vip-pdf-copy h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 1.1rem + 1.5vw, 2rem);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .vip-pdf-copy p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .vip-pdf-form-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 24px;
+    }
+
+    .vip-field-group {
+      margin-block-end: 10px;
+    }
+
+    .vip-field-group label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 6px;
+      padding: 6px 0;
+      margin-top: -6px;
+    }
+
+    .vip-field-row {
+      display: flex;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .vip-field-row input[type="email"] {
+      flex: 1;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      padding: 0.7rem 0.85rem;
+      min-height: 48px;
+      border: 1px solid #bbbbbb;
+      background: #ffffff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .vip-field-row input[type="email"]:focus-visible {
+      outline: 2px solid #111111;
+      outline-offset: 1px;
+      border-color: #111111;
+    }
+
+    .vip-field-row input[type="email"]:invalid:user-invalid {
+      border-color: #b91c1c;
+    }
+
+    .vip-pdf-submit {
+      background: var(--text);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 0 20px;
+      min-height: 48px;
+      border: 1px solid var(--text);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .vip-pdf-submit:hover:not(:disabled) {
+      background: #333333;
+    }
+
+    .vip-pdf-submit:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .vip-pdf-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .vip-pdf-status {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 8px;
+      min-height: 18px;
+    }
+
+    @media (pointer: coarse) {
+      .vip-field-row input[type="email"],
+      .vip-pdf-submit {
+        min-height: 52px;
+      }
+    }
+
     @media (max-width: 1024px) {
       .editorial-spread {
         grid-template-columns: 1fr;
@@ -1016,11 +1162,31 @@
       .rule-card {
         padding: 18px 16px;
       }
+
+      .vip-pdf-section {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+        gap: 20px;
+        margin-bottom: 48px;
+      }
+
+      .vip-pdf-form-card {
+        padding: 16px 14px;
+      }
+
+      .vip-field-row {
+        flex-direction: column;
+      }
+
+      .vip-pdf-submit {
+        width: 100%;
+      }
     }
 
     @media print {
       .mag-sticky-nav,
-      .matrix-filter-bar {
+      .matrix-filter-bar,
+      .vip-pdf-section {
         display: none;
       }
       body {
@@ -1050,7 +1216,7 @@
 
     <div class="mag-actions-right">
       <a href="index.html" class="btn-mag-outline">&larr; Back to Storefront (48 Items)</a>
-      <button class="btn-mag-solid" onclick="window.print()">Save / Print Magazine PDF</button>
+      <button type="button" class="btn-mag-solid" onclick="handleTopPdfClick()">Save / Print Magazine PDF</button>
     </div>
   </nav>
 
@@ -2016,8 +2182,53 @@
       </div>
     </section>
 
+    <!-- VIP PRINTABLE PDF & FRIDAY MENSWEAR DROP CAPTURE -->
+    <section class="vip-pdf-section" id="vipPdfSection">
+      <div class="vip-pdf-copy">
+        <span class="vip-kicker">NOFACE Atelier VIP Club &middot; Printable Archive Edition</span>
+        <h3>Download This 32-Outfit Magazine as a PDF &amp; Join the Friday Drop</h3>
+        <p>
+          Enter your email to save this complete 32-outfit visual blueprint (with direct 1-click Amazon links embedded inside the PDF) and receive our curated Friday 3-Piece Menswear Drop once a week.
+        </p>
+      </div>
+      <div class="vip-pdf-form-card">
+        <form name="noface-vip-club" method="POST" action="/capsule-playbook.html" data-netlify="true" netlify-honeypot="bot-field" id="magVipForm">
+          <input type="hidden" name="form-name" value="noface-vip-club" />
+          <input type="hidden" name="source" value="lookbook-magazine" />
+          <div class="visually-hidden">
+            <label for="magBotField">Do not fill this out if you are human</label>
+            <input id="magBotField" name="bot-field" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="vip-field-group">
+            <label for="magVipEmail">Email Address (Required)</label>
+            <div class="vip-field-row">
+              <input
+                type="email"
+                id="magVipEmail"
+                name="email"
+                required
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                enterkeyhint="send"
+                placeholder="you@example.com"
+                aria-describedby="magVipHint magVipStatus"
+              />
+              <button type="submit" class="vip-pdf-submit" id="magVipBtn">Unlock &amp; Save PDF</button>
+            </div>
+            <span id="magVipHint" class="vip-pdf-hint">Free forever. Zero spam. Or <button type="button" onclick="window.print()" style="background:none;border:none;text-decoration:underline;cursor:pointer;color:var(--text);font-size:11px;font-weight:600;">print directly now</button>.</span>
+            <div id="magVipStatus" class="vip-pdf-status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <footer style="border-top: 1px solid var(--border); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--text-muted);">
-      <div>&copy; 2026 NOFACE ATELIER. Official Amazon Associates Curation (Store ID: nofaceatelier-20).</div>
+      <div>
+        &copy; 2026 NOFACE ATELIER. Official Amazon Associates Curation (Store ID: nofaceatelier-20).
+        <span style="display: block; margin-top: 4px;">Brand Partnerships, Press &amp; Seeding: <a href="mailto:contact.nofaceatelier@gmail.com" style="color: var(--text); font-weight: 600; text-decoration: underline;">contact.nofaceatelier@gmail.com</a></span>
+      </div>
       <div><a href="index.html" style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px;">&larr; Return to Main 48-Item Storefront</a></div>
     </footer>
 
@@ -2033,6 +2244,74 @@
         } else {
           row.style.display = 'none';
         }
+      });
+    }
+
+    function handleTopPdfClick() {
+      try {
+        if (localStorage.getItem('noface_vip_email')) {
+          window.print();
+          return;
+        }
+      } catch (_) {}
+      const sec = document.getElementById('vipPdfSection');
+      const inp = document.getElementById('magVipEmail');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (inp) setTimeout(() => inp.focus(), 450);
+    }
+
+    const magVipForm = document.getElementById('magVipForm');
+    const magVipEmail = document.getElementById('magVipEmail');
+    const magVipBtn = document.getElementById('magVipBtn');
+    const magVipStatus = document.getElementById('magVipStatus');
+
+    if (magVipEmail) {
+      magVipEmail.addEventListener('input', () => {
+        magVipEmail.setCustomValidity('');
+        if (magVipStatus) magVipStatus.textContent = '';
+      });
+      magVipEmail.addEventListener('blur', () => {
+        if (magVipEmail.value && !magVipEmail.checkValidity()) {
+          magVipEmail.setCustomValidity('Please enter a valid email address (for example, name@domain.com).');
+          if (magVipStatus) magVipStatus.textContent = 'Please enter a valid email address.';
+        }
+      });
+    }
+
+    if (magVipForm) {
+      magVipForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!magVipEmail.checkValidity()) {
+          magVipEmail.reportValidity();
+          return;
+        }
+        magVipBtn.disabled = true;
+        magVipBtn.textContent = 'Saving...';
+        const formData = new FormData(magVipForm);
+        try {
+          localStorage.setItem('noface_vip_email', magVipEmail.value.trim());
+        } catch (_) {}
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          magVipStatus.textContent = 'You are on the Friday Drop List! Opening PDF print dialog...';
+          magVipBtn.textContent = 'Unlocked ✓';
+          setTimeout(() => window.print(), 300);
+        })
+        .catch(() => {
+          magVipStatus.textContent = 'Unlocked! Opening PDF print dialog...';
+          magVipBtn.textContent = 'Unlocked ✓';
+          setTimeout(() => window.print(), 300);
+        });
+      });
+    }
+
+    if (window.location.search.includes('print=1')) {
+      window.addEventListener('load', () => {
+        setTimeout(() => window.print(), 600);
       });
     }
   </script>
