@@ -893,22 +893,22 @@
     footer.site-footer {
       border-top: 1px solid var(--border);
       background: #ffffff;
-      padding: 56px 36px 40px;
+      padding: 56px 36px 110px;
     }
 
     .footer-inner {
       max-width: 1440px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 1.25fr 0.9fr;
+      gap: 36px;
+      align-items: start;
       font-size: 12px;
       color: var(--text-muted);
     }
 
     .footer-brand {
-      max-width: 440px;
+      max-width: 420px;
     }
 
     .footer-brand h4 {
@@ -917,6 +917,41 @@
       color: var(--text);
       letter-spacing: 3px;
       margin-bottom: 10px;
+    }
+
+    .footer-contact-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--text);
+      padding: 20px 24px;
+      color: var(--text);
+    }
+
+    .footer-contact-kicker {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-contact-email {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      background: #111111;
+      padding: 10px 16px;
+      margin-top: 10px;
+      letter-spacing: 0.4px;
+      border: 1px solid #111111;
+      transition: all 0.2s;
+    }
+
+    .footer-contact-email:hover {
+      background: #ffffff;
+      color: #111111;
     }
 
     @media (max-width: 1080px) {
@@ -1314,11 +1349,22 @@
       }
 
       footer.site-footer {
-        padding: 36px 14px 28px;
+        padding: 36px 14px 110px;
       }
 
       .footer-inner {
+        grid-template-columns: 1fr;
         gap: 24px;
+      }
+
+      .footer-contact-card {
+        padding: 18px 16px;
+      }
+
+      .footer-contact-email {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
       }
     }
   </style>
@@ -1510,11 +1556,15 @@
         <h4>NOFACE</h4>
         <p>Minimalist menswear curation. As an official Amazon Associate (Store ID: nofaceatelier-20), we earn from qualifying purchases at no additional cost to you. All product prices and ratings reflect verified Amazon listings.</p>
       </div>
+      <div class="footer-contact-card">
+        <span class="footer-contact-kicker">Brand Partnerships, Press &amp; Seeding</span>
+        <div style="font-size: 13px; color: var(--text-muted);">For menswear sponsorships, sample seeding, or styling inquiries, contact our studio desk directly:</div>
+        <a href="mailto:contact.nofaceatelier@gmail.com" class="footer-contact-email">contact.nofaceatelier@gmail.com</a>
+      </div>
       <div>
-        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Quick Links &amp; Brand Contact</div>
-        <p><a href="capsule-playbook.html" target="_blank">Free 16-Piece Capsule Lookbook Magazine</a></p>
-        <p style="margin-top: 4px;"><a href="videos/faceless-summer-lookbook-veo.mp4" download>Download Runway Video (MP4)</a></p>
-        <p style="margin-top: 8px;">Brand Partnerships &amp; Seeding: <a href="mailto:contact.nofaceatelier@gmail.com" style="color: var(--text); font-weight: 600; text-decoration: underline;">contact.nofaceatelier@gmail.com</a></p>
+        <div style="font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Quick Links</div>
+        <p><a href="capsule-playbook.html" target="_blank" style="text-decoration: underline;">Free 16-Piece Capsule Lookbook Magazine</a></p>
+        <p style="margin-top: 6px;"><a href="videos/faceless-summer-lookbook-veo.mp4" download style="text-decoration: underline;">Download Runway Video (MP4)</a></p>
       </div>
     </div>
   </footer>
